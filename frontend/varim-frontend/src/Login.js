@@ -12,7 +12,7 @@ function Login({ allerVers, setUtilisateur }) {
     setChargement(true);
     setMessage({ texte: '', type: '' });
     try {
-      const reponse = await fetch('http://localhost:5000/api/auth/connexion', {
+      const reponse = await fetch('https://varim-music.onrender.com/api/auth/connexion', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ telephone, mot_de_passe: motDePasse })
