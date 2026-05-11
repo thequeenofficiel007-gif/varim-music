@@ -1,0 +1,393 @@
+.ret-page {
+  min-height: 100vh;
+  background-color: #0a0e1a;
+  color: #ffffff;
+  padding-bottom: 80px;
+}
+
+/* ===== HEADER ===== */
+.ret-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background-color: #0d1226;
+  border-bottom: 1px solid #1e2a4a;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.ret-header-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  color: #4f9cf9;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.ret-logo-img {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* ===== CONTENU ===== */
+.ret-contenu {
+  padding: 16px 16px 0;
+}
+
+.ret-retour {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  color: #4f9cf9;
+  font-size: 13px;
+  cursor: pointer;
+  margin-bottom: 16px;
+  padding: 0;
+}
+
+.ret-titre-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #4f9cf9;
+  margin-bottom: 20px;
+}
+
+.ret-titre {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* ===== SOLDES ===== */
+.ret-soldes {
+  margin-bottom: 20px;
+}
+
+.ret-solde-total {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background-color: #0d1226;
+  border: 1px solid #4f9cf9;
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+.ret-wallet-ic { color: #4f9cf9; flex-shrink: 0; }
+
+.ret-solde-val {
+  font-size: 24px;
+  font-weight: bold;
+  color: #4f9cf9;
+  margin: 0;
+  line-height: 1;
+}
+
+.ret-solde-lab {
+  font-size: 12px;
+  color: #a0aec0;
+  margin: 4px 0 0;
+}
+
+.ret-soldes-ops {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.ret-solde-op {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #0d1226;
+  border: 1px solid #1e2a4a;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.ret-solde-op.mtn   { border-color: rgba(255,204,0,0.4); }
+.ret-solde-op.airtel { border-color: rgba(255,68,68,0.4); }
+
+.ret-op-badge {
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.ret-op-badge.mtn   { background-color: #ffcc00; color: #000000; }
+.ret-op-badge.airtel { background-color: #ff0000; color: #ffffff; }
+
+.ret-op-montant {
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0 0 2px;
+}
+
+.ret-op-numero {
+  font-size: 11px;
+  color: #4f9cf9;
+  margin: 0;
+}
+
+.ret-op-warning {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 11px;
+  color: #f6ad55;
+  margin: 0;
+}
+
+/* ===== BOX FORMULAIRE ===== */
+.ret-box {
+  background-color: #0d1226;
+  border: 1px solid #1e2a4a;
+  border-radius: 14px;
+  padding: 20px 16px;
+  margin-bottom: 20px;
+}
+
+.ret-box-titre {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0 0 18px;
+}
+
+/* ===== MESSAGE ERREUR ===== */
+.ret-message {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+.ret-message.erreur {
+  background-color: rgba(255,68,68,0.1);
+  color: #ff4444;
+  border: 1px solid rgba(255,68,68,0.3);
+}
+
+/* ===== CHAMPS ===== */
+.ret-champ {
+  margin-bottom: 18px;
+}
+
+.ret-champ label {
+  display: block;
+  font-size: 13px;
+  color: #a0aec0;
+  margin-bottom: 8px;
+}
+
+.ret-champ input {
+  width: 100%;
+  padding: 13px 16px;
+  background-color: #1a2035;
+  border: 1px solid #1e2a4a;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 16px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.ret-champ input:focus { border-color: #4f9cf9; }
+
+.ret-aide {
+  display: block;
+  font-size: 12px;
+  color: #4a5568;
+  margin-top: 6px;
+}
+
+/* ===== CHOIX OPÉRATEUR ===== */
+.ret-operateurs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.ret-op-carte {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 14px 10px;
+  background-color: #1a2035;
+  border: 2px solid #1e2a4a;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+}
+
+.ret-op-carte.actif { border-color: #4f9cf9; background-color: #0d1f3c; }
+.ret-op-carte.desactive { opacity: 0.45; cursor: not-allowed; }
+
+.ret-op-carte-montant {
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0;
+}
+
+.ret-op-carte-warning {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 11px;
+  color: #f6ad55;
+  margin: 0;
+}
+
+/* ===== DESTINATION ===== */
+.ret-destination {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  background-color: #1a2035;
+  border-radius: 10px;
+  font-size: 13px;
+  color: #a0aec0;
+  margin-bottom: 16px;
+}
+
+/* ===== BOUTONS ===== */
+.ret-btn-primaire {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 14px;
+  background-color: #4f9cf9;
+  border: none;
+  border-radius: 12px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: background 0.2s;
+}
+
+.ret-btn-primaire:hover    { background-color: #3a7fd4; }
+.ret-btn-primaire:disabled { background-color: #1e3a5a; cursor: not-allowed; }
+
+.ret-btn-secondaire {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 13px;
+  background-color: transparent;
+  border: 1px solid #1e2a4a;
+  border-radius: 12px;
+  color: #a0aec0;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.ret-btn-secondaire:hover { border-color: #4f9cf9; color: #4f9cf9; }
+
+/* ===== SUCCÈS ===== */
+.ret-succes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+  padding: 16px 0;
+}
+
+.ret-succes-ic { color: #48bb78; }
+
+.ret-succes h2 { font-size: 20px; font-weight: bold; color: #ffffff; margin: 0; }
+
+.ret-succes p {
+  font-size: 14px;
+  color: #a0aec0;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 280px;
+}
+
+/* ===== HISTORIQUE ===== */
+.ret-historique {
+  background-color: #0d1226;
+  border: 1px solid #1e2a4a;
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.ret-historique-titre {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0 0 14px;
+}
+
+.ret-historique-liste { display: flex; flex-direction: column; gap: 8px; }
+
+.ret-historique-ligne {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background-color: #1a2035;
+  border-radius: 10px;
+  border: 1px solid #1e2a4a;
+}
+
+.ret-hist-gauche { display: flex; align-items: center; gap: 10px; }
+.ret-hist-numero { font-size: 13px; font-weight: 500; color: #ffffff; margin: 0 0 2px; }
+.ret-hist-date   { font-size: 11px; color: #a0aec0; margin: 0; }
+.ret-hist-droite { text-align: right; }
+.ret-hist-montant { font-size: 15px; font-weight: bold; color: #f6ad55; margin: 0 0 4px; }
+
+.ret-statut {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.ret-statut.en_attente { background-color: rgba(246,173,85,0.15); color: #f6ad55; }
+.ret-statut.traite     { background-color: rgba(72,187,120,0.15);  color: #48bb78; }
+.ret-statut.annule     { background-color: rgba(255,68,68,0.15);   color: #ff4444; }
+
+/* ===== DESKTOP ===== */
+@media (min-width: 769px) {
+  .ret-header  { padding: 14px 40px; }
+  .ret-contenu { max-width: 700px; margin: 0 auto; padding: 30px 40px 0; }
+
+  .ret-soldes-ops { grid-template-columns: 1fr 1fr; }
+
+  .ret-box { padding: 28px; }
+}

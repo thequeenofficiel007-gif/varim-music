@@ -1,0 +1,737 @@
+/* ===================== BASE ===================== */
+.catalogue-page {
+  min-height: 100vh;
+  background-color: #0a0e1a;
+  color: #ffffff;
+  padding-bottom: 100px;
+}
+
+/* ===================== HEADER ===================== */
+.cat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background-color: #0d1226;
+  border-bottom: 1px solid #1e2a4a;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.cat-header-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  color: #4f9cf9;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.cat-logo-img {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* ===================== CONTENU ===================== */
+.catalogue-contenu {
+  padding: 16px 16px 0;
+}
+
+/* ===================== RECHERCHE ===================== */
+.barre-recherche-wrapper {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.barre-recherche {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #0d1226;
+  border: 1px solid #1e2a4a;
+  border-radius: 12px;
+  padding: 10px 14px;
+}
+
+.barre-recherche:focus-within {
+  border-color: #4f9cf9;
+}
+
+.icone-recherche {
+  color: #a0aec0;
+  flex-shrink: 0;
+}
+
+.barre-recherche input {
+  flex: 1;
+  background: none;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.barre-recherche input::placeholder {
+  color: #4a5568;
+}
+
+.btn-effacer {
+  background: none;
+  border: none;
+  color: #a0aec0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.resultats-recherche {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  background-color: #0d1226;
+  border: 1px solid #1e2a4a;
+  border-radius: 12px;
+  overflow: hidden;
+  z-index: 200;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+}
+
+.resultat-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.resultat-item:hover {
+  background-color: #1a2035;
+}
+
+.resultat-pochette {
+  width: 38px;
+  height: 38px;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: #1a2035;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4f9cf9;
+  flex-shrink: 0;
+}
+
+.resultat-pochette img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.resultat-titre {
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+}
+
+.resultat-artiste {
+  font-size: 12px;
+  color: #a0aec0;
+  margin: 0;
+}
+
+/* ===================== SECTIONS ===================== */
+.section {
+  margin-bottom: 28px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.section-titre-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #4f9cf9;
+}
+
+.section-titre {
+  font-size: 17px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0;
+}
+
+.btn-voir-plus {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  background: none;
+  border: none;
+  color: #a0aec0;
+  font-size: 13px;
+  cursor: pointer;
+  padding: 4px 0;
+  transition: color 0.15s;
+}
+
+.btn-voir-plus:hover {
+  color: #4f9cf9;
+}
+
+/* ===================== SCROLL HORIZONTAL ===================== */
+.scroll-horizontal {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scroll-horizontal::-webkit-scrollbar {
+  display: none;
+}
+
+/* ===================== CARTE MUSIQUE (Nouveautés) ===================== */
+.carte-musique {
+  flex-shrink: 0;
+  width: 130px;
+  cursor: pointer;
+}
+
+.carte-pochette {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #0d1226;
+  margin-bottom: 8px;
+}
+
+.carte-pochette img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.2s;
+}
+
+.carte-musique:hover .carte-pochette img,
+.carte-top-vente:hover .carte-pochette img {
+  transform: scale(1.04);
+}
+
+.pochette-vide {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4f9cf9;
+  background-color: #1a2035;
+}
+
+.carte-type-badge {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background-color: #4f9cf9;
+  color: #ffffff;
+  font-size: 10px;
+  padding: 2px 7px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.carte-titre-texte {
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 130px;
+}
+
+.carte-artiste-texte {
+  font-size: 12px;
+  color: #a0aec0;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 130px;
+}
+
+/* ===================== CARTE TOP VENTE ===================== */
+.carte-top-vente {
+  flex-shrink: 0;
+  width: 130px;
+  cursor: pointer;
+  position: relative;
+}
+
+.top-rang-numero {
+  position: absolute;
+  left: -10px;
+  bottom: 38px;
+  font-size: 52px;
+  font-weight: 900;
+  line-height: 1;
+  z-index: 1;
+  pointer-events: none;
+  user-select: none;
+  background: linear-gradient(135deg, #4f9cf9 0%, #818cf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  opacity: 0.85;
+  text-shadow: none;
+}
+
+.carte-top-vente:nth-child(1) .top-rang-numero {
+  background: linear-gradient(135deg, #ffe066 0%, #ffd700 35%, #c8860a 70%, #f6c94e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  opacity: 1;
+  font-size: 58px;
+  filter: drop-shadow(0 2px 4px rgba(200,134,10,0.4));
+}
+
+/* ===================== ARTISTES ===================== */
+.carte-artiste-rond {
+  flex-shrink: 0;
+  width: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.artiste-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #4f9cf9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  font-weight: bold;
+  color: #ffffff;
+  flex-shrink: 0;
+  border: 2px solid #1e2a4a;
+  transition: border-color 0.2s;
+}
+
+.carte-artiste-rond:hover .artiste-avatar {
+  border-color: #4f9cf9;
+}
+
+.artiste-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.artiste-nom {
+  font-size: 12px;
+  color: #ffffff;
+  text-align: center;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 90px;
+}
+
+/* ===================== BOTTOM SHEET ===================== */
+.bs-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 500;
+  display: flex;
+  align-items: flex-end;
+}
+
+.bottom-sheet {
+  width: 100%;
+  background-color: #0d1226;
+  border-top: 1px solid #1e2a4a;
+  border-radius: 20px 20px 0 0;
+  padding-bottom: 30px;
+  animation: slideUp 0.25s ease;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+.bs-drag-bar {
+  width: 40px;
+  height: 4px;
+  background-color: #1e2a4a;
+  border-radius: 2px;
+  margin: 12px auto 0;
+}
+
+.bs-contenu {
+  padding: 16px 20px 0;
+}
+
+.bs-haut {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.bs-pochette-wrapper {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.bs-pochette-img {
+  width: 90px;
+  height: 90px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.bs-pochette-vide {
+  width: 90px;
+  height: 90px;
+  border-radius: 10px;
+  background-color: #1a2035;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4f9cf9;
+}
+
+.bs-type-badge {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: #4f9cf9;
+  color: #ffffff;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.bs-meta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  flex: 1;
+}
+
+.bs-titre {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0;
+}
+
+.bs-artiste {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  color: #4f9cf9;
+  cursor: pointer;
+  margin: 0;
+}
+
+.bs-artiste:hover {
+  text-decoration: underline;
+}
+
+.bs-prix {
+  font-size: 15px;
+  font-weight: bold;
+  color: #4f9cf9;
+  margin: 4px 0 0;
+}
+
+.bs-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bs-btn-extrait {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 13px;
+  background-color: transparent;
+  border: 1px solid #4f9cf9;
+  border-radius: 12px;
+  color: #4f9cf9;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.bs-btn-extrait:hover {
+  background-color: #4f9cf9;
+  color: #ffffff;
+}
+
+.bs-btn-acheter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 13px;
+  background-color: #4f9cf9;
+  border: none;
+  border-radius: 12px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.bs-btn-acheter:hover {
+  background-color: #3a7fd4;
+}
+
+.bs-btn-partager {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px;
+  background-color: transparent;
+  border: 1px solid #1e2a4a;
+  border-radius: 12px;
+  color: #a0aec0;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.bs-btn-partager:hover {
+  border-color: #4f9cf9;
+  color: #4f9cf9;
+}
+
+/* ===================== PAGE VOIR PLUS ===================== */
+.voir-plus-page {
+  padding: 16px;
+}
+
+.btn-retour {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  color: #4f9cf9;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 16px;
+  padding: 0;
+}
+
+.voir-plus-titre {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.liste-voir-plus {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.item-liste {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.item-liste:hover {
+  background-color: #0d1226;
+}
+
+.item-rang {
+  font-size: 14px;
+  font-weight: bold;
+  color: #4a5568;
+  width: 20px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.item-pochette-small {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background-color: #1a2035;
+}
+
+.item-pochette-small img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pochette-vide-small {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4f9cf9;
+}
+
+.item-infos {
+  flex: 1;
+  min-width: 0;
+}
+
+.item-titre {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.item-artiste-lien {
+  font-size: 12px;
+  color: #4f9cf9;
+  margin: 0;
+  cursor: pointer;
+}
+
+.item-artiste-lien:hover {
+  text-decoration: underline;
+}
+
+.item-ventes-hebdo {
+  font-size: 12px;
+  font-weight: bold;
+  color: #48bb78;
+  flex-shrink: 0;
+}
+
+/* ===================== CHARGEMENT ===================== */
+.chargement {
+  text-align: center;
+  color: #a0aec0;
+  padding: 60px 20px;
+  font-size: 15px;
+}
+
+/* ===================== DESKTOP ===================== */
+@media (min-width: 769px) {
+  .catalogue-contenu {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 40px 0;
+  }
+
+  .cat-header {
+    padding: 14px 40px;
+  }
+
+  .cat-logo-img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .cat-header-logo {
+    font-size: 20px;
+  }
+
+  .carte-pochette {
+    width: 160px;
+    height: 160px;
+  }
+
+  .carte-musique {
+    width: 160px;
+  }
+
+  .carte-top-vente {
+    width: 160px;
+  }
+
+  .carte-titre-texte,
+  .carte-artiste-texte {
+    width: 160px;
+  }
+
+  .top-rang-numero {
+    font-size: 64px;
+    bottom: 44px;
+  }
+}
+
+/* RECHERCHE AMÉLIORÉE */
+.resultats-section { padding: 4px 0; }
+
+.resultats-section-titre {
+  font-size: 11px;
+  font-weight: 700;
+  color: #4f9cf9;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 8px 14px 4px;
+  margin: 0;
+}
+
+.resultat-chargement {
+  padding: 16px 14px;
+  font-size: 13px;
+  color: #a0aec0;
+  text-align: center;
+}
+
+.resultat-vide {
+  padding: 16px 14px;
+  font-size: 13px;
+  color: #4a5568;
+  text-align: center;
+}

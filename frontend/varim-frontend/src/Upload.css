@@ -1,0 +1,88 @@
+.upl-page { min-height: 100vh; background-color: #0a0e1a; display: flex; align-items: flex-start; justify-content: center; padding: 20px; }
+
+.upl-box { background-color: #0d1226; border: 1px solid #1e2a4a; border-radius: 20px; padding: 28px 24px; width: 100%; max-width: 500px; margin: 20px 0; }
+
+.upl-logo { display: flex; align-items: center; justify-content: center; gap: 8px; cursor: pointer; margin-bottom: 12px; color: #4f9cf9; font-size: 18px; font-weight: bold; }
+.upl-logo-img { width: 36px; height: 36px; object-fit: cover; border-radius: 8px; }
+
+.upl-retour { display: flex; align-items: center; gap: 4px; background: none; border: none; color: #4f9cf9; font-size: 13px; cursor: pointer; margin-bottom: 14px; padding: 0; }
+
+.upl-titre { font-size: 20px; font-weight: bold; color: #ffffff; margin: 0 0 20px; }
+
+.upl-message { display: flex; align-items: center; gap: 8px; padding: 12px 14px; border-radius: 10px; font-size: 13px; margin-bottom: 18px; }
+.upl-message.succes { background-color: rgba(72,187,120,0.1); color: #48bb78; border: 1px solid rgba(72,187,120,0.3); }
+.upl-message.erreur { background-color: rgba(255,68,68,0.1); color: #ff4444; border: 1px solid rgba(255,68,68,0.3); }
+
+/* PROGRESSION CIRCULAIRE */
+.upl-progress-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px;
+  gap: 12px;
+}
+
+.upl-progress-svg {
+  width: 130px;
+  height: 130px;
+  position: relative;
+}
+
+.upl-progress-svg.en-attente circle:last-child {
+  animation: pulse-stroke 1s ease-in-out infinite alternate;
+}
+
+@keyframes pulse-stroke {
+  from { opacity: 1; }
+  to { opacity: 0.5; }
+}
+
+.upl-progress-pct {
+  font-size: 28px;
+  font-weight: bold;
+  color: #4f9cf9;
+  margin-top: -10px;
+}
+
+.upl-progress-label {
+  font-size: 14px;
+  color: #a0aec0;
+  margin: 0;
+  text-align: center;
+}
+
+/* CHAMPS */
+.upl-champ { margin-bottom: 18px; }
+.upl-champ label { display: block; font-size: 13px; color: #a0aec0; margin-bottom: 8px; }
+
+.upl-input { width: 100%; padding: 12px 14px; background-color: #1a2035; border: 1px solid #1e2a4a; border-radius: 10px; color: #ffffff; font-size: 14px; outline: none; box-sizing: border-box; }
+.upl-input:focus { border-color: #4f9cf9; }
+select.upl-input { cursor: pointer; }
+select.upl-input option { background-color: #0d1226; }
+
+/* TYPE CARTES */
+.upl-types { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.upl-type-carte { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 16px; background-color: #1a2035; border: 2px solid #1e2a4a; border-radius: 12px; cursor: pointer; transition: all 0.2s; color: #a0aec0; text-align: center; }
+.upl-type-carte span { font-size: 14px; font-weight: 600; color: #ffffff; }
+.upl-type-carte small { font-size: 12px; color: #a0aec0; }
+.upl-type-carte.active { border-color: #4f9cf9; background-color: #0d1f3c; color: #4f9cf9; }
+
+/* FICHIER */
+.upl-fichier-label { display: flex; align-items: center; gap: 10px; padding: 14px; background-color: #1a2035; border: 1px dashed #1e2a4a; border-radius: 10px; cursor: pointer; color: #a0aec0; font-size: 13px; transition: all 0.2s; overflow: hidden; }
+.upl-fichier-label:hover { border-color: #4f9cf9; color: #4f9cf9; }
+.upl-pochette-preview { width: 60px; height: 60px; object-fit: cover; border-radius: 8px; flex-shrink: 0; }
+.upl-nom-fichier { font-size: 11px; color: #4f9cf9; margin-top: 5px; }
+
+/* PISTES */
+.upl-pistes { display: flex; flex-direction: column; gap: 10px; }
+.upl-piste { display: flex; align-items: flex-start; gap: 10px; padding: 12px; background-color: #1a2035; border-radius: 10px; border: 1px solid #1e2a4a; }
+.upl-piste-num { font-size: 13px; color: #4f9cf9; font-weight: bold; min-width: 22px; text-align: center; padding-top: 10px; flex-shrink: 0; }
+.upl-piste-droite { flex: 1; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.upl-piste-titre { padding: 9px 12px !important; font-size: 13px !important; }
+.upl-piste-fichier-label { display: flex; align-items: center; gap: 6px; padding: 8px 12px; background-color: #0d1226; border: 1px dashed #1e2a4a; border-radius: 8px; cursor: pointer; color: #a0aec0; font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.upl-piste-suppr { background: none; border: none; color: #ff4444; cursor: pointer; padding: 6px; flex-shrink: 0; margin-top: 6px; }
+
+.upl-btn-ajouter { display: flex; align-items: center; gap: 6px; padding: 10px 16px; background: transparent; border: 1px dashed #4f9cf9; border-radius: 10px; color: #4f9cf9; font-size: 13px; cursor: pointer; width: 100%; justify-content: center; }
+
+.upl-btn { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 14px; background-color: #4f9cf9; border: none; border-radius: 12px; color: #ffffff; font-size: 15px; font-weight: bold; cursor: pointer; margin-top: 8px; transition: background 0.2s; }
+.upl-btn:hover { background-color: #3a7fd4; }

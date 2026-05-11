@@ -1,0 +1,428 @@
+.profil-page {
+  min-height: 100vh;
+  background-color: #0a0e1a;
+  color: #ffffff;
+  padding-bottom: 80px;
+}
+
+/* ===== HEADER ===== */
+.profil-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background-color: #0d1226;
+  border-bottom: 1px solid #1e2a4a;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.profil-header-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  color: #4f9cf9;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.profil-logo-img {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* ===== RETOUR ===== */
+.profil-retour {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  color: #4f9cf9;
+  font-size: 13px;
+  cursor: pointer;
+  padding: 12px 16px 0;
+}
+
+/* ===== HERO ===== */
+.profil-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 30px 20px 24px;
+  margin: 12px 16px 0;
+  border-radius: 16px;
+}
+
+.profil-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-color: #0d1f3c;
+}
+
+.profil-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.15;
+  filter: blur(20px);
+  transform: scale(1.1);
+}
+
+.profil-hero-contenu {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+/* ===== AVATAR ===== */
+.profil-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #4f9cf9;
+  flex-shrink: 0;
+}
+
+.profil-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profil-avatar-initiale {
+  width: 100%;
+  height: 100%;
+  background-color: #1a2035;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: bold;
+  color: #4f9cf9;
+}
+
+/* ===== NOM & BIO ===== */
+.profil-nom {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0;
+}
+
+.profil-bio {
+  font-size: 13px;
+  color: #a0aec0;
+  line-height: 1.5;
+  max-width: 320px;
+  margin: 0;
+}
+
+/* ===== STATS ===== */
+.profil-stats {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profil-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.profil-stat-sep {
+  width: 1px;
+  height: 28px;
+  background-color: #1e2a4a;
+}
+
+.stat-val {
+  font-size: 20px;
+  font-weight: bold;
+  color: #4f9cf9;
+}
+
+.stat-lab {
+  font-size: 11px;
+  color: #a0aec0;
+}
+
+/* ===== ACTIONS ===== */
+.profil-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profil-btn-abonner {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 24px;
+  background-color: #4f9cf9;
+  border: none;
+  border-radius: 25px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.profil-btn-abonner.abonne {
+  background-color: transparent;
+  border: 1px solid #4f9cf9;
+  color: #4f9cf9;
+}
+
+.profil-btn-abonner:hover {
+  background-color: #3a7fd4;
+  color: #ffffff;
+}
+
+.profil-btn-partager {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid #1e2a4a;
+  color: #a0aec0;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.profil-btn-partager:hover {
+  border-color: #4f9cf9;
+  color: #4f9cf9;
+}
+
+/* ===== FILTRES ===== */
+.profil-filtres {
+  display: flex;
+  gap: 8px;
+  padding: 20px 16px 0;
+}
+
+.profil-filtre-btn {
+  padding: 7px 18px;
+  background-color: #0d1226;
+  border: 1px solid #1e2a4a;
+  border-radius: 20px;
+  color: #a0aec0;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.2s;
+}
+
+.profil-filtre-btn.actif {
+  background-color: #4f9cf9;
+  border-color: #4f9cf9;
+  color: #ffffff;
+}
+
+/* ===== DISCOGRAPHIE ===== */
+.profil-discographie {
+  padding: 16px;
+}
+
+.profil-grille {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.profil-carte {
+  background-color: #0d1226;
+  border: 1px solid #1e2a4a;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.profil-carte:hover {
+  border-color: #4f9cf9;
+}
+
+.profil-carte-pochette {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.profil-carte-pochette img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.2s;
+}
+
+.profil-carte-pochette:hover img {
+  transform: scale(1.05);
+}
+
+.profil-pochette-vide {
+  width: 100%;
+  height: 100%;
+  background-color: #1a2035;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4f9cf9;
+  aspect-ratio: 1;
+}
+
+.profil-carte-type {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  background-color: #4f9cf9;
+  color: #ffffff;
+  font-size: 10px;
+  padding: 2px 7px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.profil-play-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0,0,0,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.profil-carte-pochette:hover .profil-play-overlay {
+  opacity: 1;
+}
+
+.profil-carte-infos {
+  padding: 10px;
+}
+
+.profil-carte-titre {
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.profil-carte-genre {
+  font-size: 11px;
+  color: #a0aec0;
+  margin: 0 0 8px;
+}
+
+.profil-carte-bas {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profil-carte-prix {
+  font-size: 13px;
+  font-weight: bold;
+  color: #4f9cf9;
+}
+
+.profil-btn-acheter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background-color: #4f9cf9;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.profil-btn-acheter:hover {
+  background-color: #3a7fd4;
+}
+
+.profil-vide {
+  text-align: center;
+  color: #a0aec0;
+  padding: 50px 20px;
+  font-size: 15px;
+}
+
+.profil-chargement {
+  text-align: center;
+  color: #a0aec0;
+  padding: 80px 20px;
+  font-size: 15px;
+}
+
+/* ===== DESKTOP ===== */
+@media (min-width: 769px) {
+  .profil-header {
+    padding: 14px 40px;
+  }
+
+  .profil-hero {
+    margin: 20px 40px 0;
+    padding: 40px;
+    border-radius: 20px;
+  }
+
+  .profil-hero-contenu {
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  .profil-avatar {
+    width: 130px;
+    height: 130px;
+    flex-shrink: 0;
+  }
+
+  .profil-nom {
+    font-size: 28px;
+  }
+
+  .profil-filtres {
+    padding: 24px 40px 0;
+  }
+
+  .profil-discographie {
+    padding: 20px 40px;
+  }
+
+  .profil-grille {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  .profil-retour {
+    padding: 16px 40px 0;
+  }
+}

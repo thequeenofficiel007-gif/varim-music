@@ -1,0 +1,139 @@
+.vpin-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0,0,0,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 20px;
+}
+
+.vpin-modal {
+  background-color: #0d1226;
+  border: 1px solid #1e2a4a;
+  border-radius: 20px;
+  padding: 36px 28px;
+  width: 100%;
+  max-width: 360px;
+  text-align: center;
+}
+
+.vpin-icone {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgba(79,156,249,0.15);
+  color: #4f9cf9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+}
+
+.vpin-titre {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0 0 8px;
+}
+
+.vpin-sous-titre {
+  font-size: 13px;
+  color: #a0aec0;
+  margin: 0 0 22px;
+  line-height: 1.5;
+}
+
+.vpin-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 11px 14px;
+  border-radius: 10px;
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+
+.vpin-message.erreur {
+  background-color: rgba(255,68,68,0.1);
+  color: #ff4444;
+  border: 1px solid rgba(255,68,68,0.3);
+}
+
+.vpin-message.succes {
+  background-color: rgba(72,187,120,0.1);
+  color: #48bb78;
+  border: 1px solid rgba(72,187,120,0.3);
+}
+
+/* 4 CASES PIN */
+.vpin-cases {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.vpin-case {
+  width: 56px;
+  height: 64px;
+  background-color: #1a2035;
+  border: 2px solid #1e2a4a;
+  border-radius: 12px;
+  color: #ffffff;
+  font-size: 28px;
+  text-align: center;
+  outline: none;
+  transition: border-color 0.2s, background-color 0.2s;
+  caret-color: transparent;
+}
+
+.vpin-case:focus {
+  border-color: #4f9cf9;
+  background-color: #0d1f3c;
+}
+
+.vpin-case.remplie {
+  border-color: #4f9cf9;
+}
+
+.vpin-case.bloquee {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.vpin-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: #4f9cf9;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: background 0.2s;
+}
+
+.vpin-btn:hover { background-color: #3a7fd4; }
+.vpin-btn:disabled { background-color: #1e3a5a; cursor: not-allowed; }
+
+.vpin-btn-annuler {
+  width: 100%;
+  padding: 12px;
+  background: transparent;
+  border: 1px solid #1e2a4a;
+  border-radius: 12px;
+  color: #a0aec0;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.vpin-btn-annuler:hover {
+  border-color: #4f9cf9;
+  color: #4f9cf9;
+}

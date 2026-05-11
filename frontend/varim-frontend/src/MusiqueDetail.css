@@ -1,0 +1,78 @@
+.md-page { min-height: 100vh; background-color: #0a0e1a; color: #ffffff; padding-bottom: 100px; }
+
+.md-header { display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; background-color: #0d1226; border-bottom: 1px solid #1e2a4a; position: sticky; top: 0; z-index: 100; }
+.md-header-logo { display: flex; align-items: center; gap: 8px; cursor: pointer; color: #4f9cf9; font-size: 18px; font-weight: bold; }
+.md-logo-img { width: 32px; height: 32px; object-fit: cover; border-radius: 6px; }
+
+.md-contenu { padding: 16px 16px 0; }
+
+.md-retour { display: flex; align-items: center; gap: 4px; background: none; border: none; color: #4f9cf9; font-size: 13px; cursor: pointer; margin-bottom: 16px; padding: 0; }
+
+/* HERO */
+.md-hero { position: relative; height: 260px; border-radius: 16px; overflow: hidden; margin-bottom: 24px; display: flex; align-items: center; justify-content: center; background-color: #0d1226; }
+
+.md-hero-bg { position: absolute; inset: 0; }
+.md-hero-bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.2; filter: blur(20px); transform: scale(1.1); }
+
+.md-pochette-wrapper { position: relative; z-index: 1; }
+.md-pochette { width: 180px; height: 180px; border-radius: 14px; object-fit: cover; box-shadow: 0 8px 32px rgba(0,0,0,0.5); }
+.md-pochette-vide { width: 180px; height: 180px; border-radius: 14px; background-color: #1a2035; display: flex; align-items: center; justify-content: center; color: #4f9cf9; }
+
+.md-type-badge { position: absolute; top: 8px; right: 8px; background-color: #4f9cf9; color: #ffffff; font-size: 11px; font-weight: 600; padding: 3px 9px; border-radius: 6px; text-transform: uppercase; }
+
+/* INFOS */
+.md-infos { margin-bottom: 24px; }
+.md-titre { font-size: 24px; font-weight: bold; color: #ffffff; margin: 0 0 14px; }
+
+.md-artiste { display: flex; align-items: center; gap: 12px; cursor: pointer; margin-bottom: 14px; padding: 12px; background-color: #0d1226; border: 1px solid #1e2a4a; border-radius: 12px; transition: border-color 0.2s; }
+.md-artiste:hover { border-color: #4f9cf9; }
+.md-artiste-photo { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+.md-artiste-initiale { width: 44px; height: 44px; border-radius: 50%; background-color: #4f9cf9; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; color: #ffffff; flex-shrink: 0; }
+.md-artiste-nom { font-size: 15px; font-weight: 600; color: #ffffff; margin: 0 0 2px; }
+.md-artiste-label { font-size: 11px; color: #a0aec0; margin: 0; }
+
+.md-meta { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+.md-meta-badge { padding: 4px 12px; background-color: #1a2035; border: 1px solid #1e2a4a; border-radius: 20px; font-size: 12px; color: #a0aec0; }
+
+.md-prix { font-size: 22px; font-weight: bold; color: #4f9cf9; margin: 0; }
+
+/* ACTIONS */
+.md-actions { display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
+
+.md-deja-achete { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 14px; background-color: rgba(72,187,120,0.1); border: 1px solid rgba(72,187,120,0.3); border-radius: 12px; color: #48bb78; font-size: 14px; font-weight: 600; }
+
+.md-btn-acheter { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 14px; background-color: #4f9cf9; border: none; border-radius: 12px; color: #ffffff; font-size: 15px; font-weight: bold; cursor: pointer; transition: background 0.2s; }
+.md-btn-acheter:hover { background-color: #3a7fd4; }
+
+.md-btn-extrait { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 13px; background: transparent; border: 1px solid #4f9cf9; border-radius: 12px; color: #4f9cf9; font-size: 14px; cursor: pointer; transition: all 0.2s; }
+.md-btn-extrait:hover { background-color: #4f9cf9; color: #ffffff; }
+
+.md-btn-partager { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 12px; background: transparent; border: 1px solid #1e2a4a; border-radius: 12px; color: #a0aec0; font-size: 14px; cursor: pointer; transition: all 0.2s; }
+.md-btn-partager:hover { border-color: #4f9cf9; color: #4f9cf9; }
+
+/* ARTISTE EN BAS */
+.md-artiste-section { display: flex; align-items: center; gap: 14px; padding: 14px; background-color: #0d1226; border: 1px solid #1e2a4a; border-radius: 14px; cursor: pointer; transition: border-color 0.2s; }
+.md-artiste-section:hover { border-color: #4f9cf9; }
+.md-artiste-section-photo { width: 52px; height: 52px; border-radius: 50%; overflow: hidden; flex-shrink: 0; }
+.md-artiste-section-photo img { width: 100%; height: 100%; object-fit: cover; }
+.md-artiste-section-initiale { width: 52px; height: 52px; border-radius: 50%; background-color: #4f9cf9; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: bold; color: #ffffff; }
+.md-artiste-section-infos { flex: 1; min-width: 0; }
+.md-artiste-section-nom { font-size: 15px; font-weight: 600; color: #ffffff; margin: 0 0 3px; }
+.md-artiste-section-bio { font-size: 12px; color: #a0aec0; margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.md-artiste-section-arrow { color: #4f9cf9; transform: rotate(180deg); flex-shrink: 0; }
+
+/* ÉTATS */
+.md-chargement { text-align: center; color: #a0aec0; padding: 80px 20px; }
+.md-introuvable { display: flex; flex-direction: column; align-items: center; gap: 14px; padding: 80px 20px; text-align: center; }
+.md-introuvable-ic { color: #1e2a4a; }
+.md-introuvable h2 { font-size: 18px; font-weight: bold; color: #ffffff; margin: 0; }
+.md-introuvable p { font-size: 14px; color: #a0aec0; margin: 0; }
+.md-btn-catalogue { padding: 12px 24px; background-color: #4f9cf9; border: none; border-radius: 20px; color: #ffffff; font-size: 14px; font-weight: bold; cursor: pointer; margin-top: 4px; }
+
+@media (min-width: 769px) {
+  .md-header { padding: 14px 40px; }
+  .md-contenu { max-width: 600px; margin: 0 auto; padding: 30px 40px 0; }
+  .md-hero { height: 320px; }
+  .md-pochette { width: 220px; height: 220px; }
+  .md-pochette-vide { width: 220px; height: 220px; }
+}

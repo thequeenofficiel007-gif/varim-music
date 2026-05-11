@@ -1,0 +1,67 @@
+.bib-page { min-height: 100vh; background-color: #0a0e1a; color: #ffffff; padding-bottom: 100px; }
+
+.bib-header { display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; background-color: #0d1226; border-bottom: 1px solid #1e2a4a; position: sticky; top: 0; z-index: 100; }
+.bib-header-logo { display: flex; align-items: center; gap: 8px; cursor: pointer; color: #4f9cf9; font-size: 18px; font-weight: bold; }
+.bib-logo-img { width: 32px; height: 32px; object-fit: cover; border-radius: 6px; }
+
+.bib-contenu { padding: 16px 16px 0; }
+
+.bib-titre-wrapper { display: flex; align-items: center; gap: 8px; margin-bottom: 16px; color: #4f9cf9; }
+.bib-titre { font-size: 20px; font-weight: bold; color: #ffffff; margin: 0; }
+
+.bib-recherche { display: flex; align-items: center; gap: 10px; background-color: #0d1226; border: 1px solid #1e2a4a; border-radius: 12px; padding: 10px 14px; margin-bottom: 14px; }
+.bib-recherche:focus-within { border-color: #4f9cf9; }
+.bib-recherche-ic { color: #a0aec0; flex-shrink: 0; }
+.bib-recherche input { flex: 1; background: none; border: none; outline: none; color: #ffffff; font-size: 14px; }
+.bib-recherche input::placeholder { color: #4a5568; }
+.bib-effacer { background: none; border: none; color: #a0aec0; cursor: pointer; display: flex; padding: 0; }
+
+.bib-filtres { display: flex; gap: 8px; margin-bottom: 18px; }
+.bib-filtre-btn { padding: 7px 16px; background-color: #0d1226; border: 1px solid #1e2a4a; border-radius: 20px; color: #a0aec0; cursor: pointer; font-size: 13px; transition: all 0.2s; }
+.bib-filtre-btn.actif { background-color: #4f9cf9; border-color: #4f9cf9; color: #ffffff; }
+
+.bib-chargement { text-align: center; color: #a0aec0; padding: 60px 20px; }
+
+.bib-vide { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 60px 20px; color: #a0aec0; text-align: center; }
+.bib-vide-ic { color: #1e2a4a; }
+.bib-btn-catalogue { padding: 11px 24px; background-color: #4f9cf9; border: none; border-radius: 20px; color: #ffffff; font-size: 14px; cursor: pointer; margin-top: 4px; }
+
+.bib-liste { display: flex; flex-direction: column; gap: 10px; }
+
+.bib-carte { background-color: #0d1226; border: 1px solid #1e2a4a; border-radius: 14px; overflow: hidden; transition: border-color 0.2s; }
+.bib-carte:hover { border-color: #2a3a5a; }
+
+.bib-carte-main { display: flex; align-items: center; gap: 12px; padding: 12px; }
+
+.bib-pochette { position: relative; width: 58px; height: 58px; border-radius: 10px; overflow: hidden; flex-shrink: 0; cursor: pointer; }
+.bib-pochette img { width: 100%; height: 100%; object-fit: cover; }
+.bib-pochette-vide { width: 100%; height: 100%; background-color: #1a2035; display: flex; align-items: center; justify-content: center; color: #4f9cf9; }
+.bib-play-overlay { position: absolute; inset: 0; background-color: rgba(0,0,0,0.45); display: flex; align-items: center; justify-content: center; color: #ffffff; opacity: 0; transition: opacity 0.2s; }
+.bib-pochette:hover .bib-play-overlay { opacity: 1; }
+.bib-type-badge { position: absolute; bottom: 4px; right: 4px; background-color: rgba(79,156,249,0.9); color: #fff; font-size: 9px; padding: 1px 5px; border-radius: 4px; text-transform: uppercase; font-weight: 600; }
+
+.bib-infos { flex: 1; min-width: 0; }
+.bib-info-titre { font-size: 14px; font-weight: 600; color: #ffffff; margin: 0 0 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.bib-info-artiste { display: flex; align-items: center; gap: 4px; font-size: 12px; color: #4f9cf9; margin: 0; cursor: pointer; }
+.bib-info-artiste:hover { text-decoration: underline; }
+
+.bib-btn-jouer { width: 38px; height: 38px; border-radius: 50%; background-color: #4f9cf9; border: none; color: #ffffff; display: flex; align-items: center; justify-content: center; cursor: pointer; flex-shrink: 0; transition: background 0.2s; }
+.bib-btn-jouer.actif { background-color: #3a7fd4; }
+.bib-btn-jouer:hover { background-color: #3a7fd4; }
+
+.bib-btn-album { width: 38px; height: 38px; border-radius: 50%; background-color: #1a2035; border: 1px solid #1e2a4a; color: #a0aec0; display: flex; align-items: center; justify-content: center; cursor: pointer; flex-shrink: 0; transition: all 0.2s; }
+.bib-btn-album:hover { border-color: #4f9cf9; color: #4f9cf9; }
+
+/* PISTES */
+.bib-pistes { border-top: 1px solid #1e2a4a; padding: 8px 12px; background-color: #0a0e1a; }
+.bib-piste-ligne { display: flex; align-items: center; gap: 10px; padding: 9px 0; border-bottom: 1px solid #0d1226; transition: background 0.15s; }
+.bib-piste-ligne:last-child { border-bottom: none; }
+.bib-piste-ligne.en-lecture .bib-piste-titre { color: #4f9cf9; }
+.bib-piste-num { font-size: 12px; color: #4a5568; width: 18px; text-align: center; flex-shrink: 0; }
+.bib-piste-titre { flex: 1; font-size: 13px; color: #ffffff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.bib-btn-piste { width: 28px; height: 28px; border-radius: 50%; background-color: #4f9cf9; border: none; color: #ffffff; display: flex; align-items: center; justify-content: center; cursor: pointer; flex-shrink: 0; }
+
+@media (min-width: 769px) {
+  .bib-header { padding: 14px 40px; }
+  .bib-contenu { max-width: 800px; margin: 0 auto; padding: 30px 40px 0; }
+}

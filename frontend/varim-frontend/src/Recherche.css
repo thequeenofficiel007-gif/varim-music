@@ -1,0 +1,137 @@
+.recherche-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+}
+
+.recherche-input-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: #1a2035;
+  border: 1px solid #1e2a4a;
+  border-radius: 25px;
+  padding: 10px 15px;
+  gap: 10px;
+}
+
+.recherche-input-wrapper:focus-within {
+  border-color: #4f9cf9;
+}
+
+.recherche-icone {
+  color: #a0aec0;
+  flex-shrink: 0;
+}
+
+.recherche-input {
+  flex: 1;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 14px;
+  outline: none;
+}
+
+.recherche-input::placeholder {
+  color: #a0aec0;
+}
+
+.recherche-effacer {
+  background: none;
+  border: none;
+  color: #a0aec0;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.recherche-effacer:hover {
+  color: #ffffff;
+}
+
+.recherche-resultats {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  width: 100%;
+  background-color: #0d1226;
+  border: 1px solid #1e2a4a;
+  border-radius: 12px;
+  overflow: hidden;
+  z-index: 999;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.recherche-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 15px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.recherche-item:hover {
+  background-color: #1a2035;
+}
+
+.recherche-pochette {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.recherche-pochette-defaut {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  background-color: #1a2035;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4f9cf9;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.recherche-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.recherche-titre {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.recherche-artiste {
+  color: #4f9cf9;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.recherche-artiste:hover {
+  text-decoration: underline;
+}
+
+.recherche-type {
+  color: #a0aec0;
+  font-size: 11px;
+  text-transform: uppercase;
+  background-color: #1a2035;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.recherche-prix {
+  color: #4f9cf9;
+  font-size: 13px;
+  font-weight: bold;
+  white-space: nowrap;
+}

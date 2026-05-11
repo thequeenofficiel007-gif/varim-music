@@ -1,0 +1,268 @@
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 5px;
+  position: relative;
+}
+
+.hamburger-badge {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 9px;
+  height: 9px;
+  background-color: #ff4444;
+  border-radius: 50%;
+  border: 2px solid #0d1226;
+}
+
+.nav-lien-ic-wrapper {
+  position: relative;
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
+.nav-lien-badge {
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  width: 8px;
+  height: 8px;
+  background-color: #ff4444;
+  border-radius: 50%;
+  border: 1px solid #0d1226;
+}
+
+.nav-lien-badge-label {
+  margin-left: auto;
+  background-color: #ff4444;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 2px 7px;
+  border-radius: 6px;
+}
+
+.nav-mobile-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1100;
+}
+
+.nav-mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 100%;
+  background-color: #0d1226;
+  border-right: 1px solid #1e2a4a;
+  display: flex;
+  flex-direction: column;
+  z-index: 1101;
+  overflow-y: auto;
+}
+
+.nav-mobile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #1e2a4a;
+}
+
+.nav-mobile-logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #4f9cf9;
+}
+
+.nav-mobile-fermer {
+  background: none;
+  border: none;
+  color: #a0aec0;
+  cursor: pointer;
+}
+
+.nav-mobile-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px;
+  border-bottom: 1px solid #1e2a4a;
+  background-color: #1a2035;
+}
+
+.nav-mobile-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #4f9cf9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.nav-mobile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nav-mobile-nom {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.nav-mobile-role {
+  color: #4f9cf9;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+.nav-mobile-liens {
+  flex: 1;
+  padding: 15px 0;
+}
+
+.nav-mobile-lien {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px;
+  background: none;
+  border: none;
+  color: #a0aec0;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s;
+}
+
+.nav-mobile-lien:hover {
+  background-color: #1a2035;
+  color: #4f9cf9;
+}
+
+.nav-mobile-lien-favoris {
+  color: #ff4d6d;
+}
+
+.nav-mobile-lien-favoris:hover {
+  background-color: rgba(255,77,109,0.08);
+  color: #ff4d6d;
+}
+
+.nav-mobile-lien-enregistrements {
+  color: #f6ad55;
+}
+
+.nav-mobile-lien-enregistrements:hover {
+  background-color: rgba(246,173,85,0.08);
+  color: #f6ad55;
+}
+
+.nav-mobile-lien-publier:hover {
+  background-color: #0d1a2e;
+  color: #4f9cf9;
+}
+
+.nav-mobile-bas {
+  padding: 20px;
+  border-top: 1px solid #1e2a4a;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nav-mobile-btn-connexion {
+  width: 100%;
+  padding: 12px;
+  background: transparent;
+  border: 1px solid #4f9cf9;
+  border-radius: 8px;
+  color: #4f9cf9;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.nav-mobile-btn-inscription {
+  width: 100%;
+  padding: 12px;
+  background: #4f9cf9;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.nav-mobile-deconnexion {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px;
+  background: transparent;
+  border: 1px solid #ff4444;
+  border-radius: 8px;
+  color: #ff4444;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+}
+.nav-mobile-lien-publier {
+  color: #4f9cf9;
+  font-weight: 500;
+  border-left: 3px solid #4f9cf9;
+  padding-left: 17px;
+}
+
+.nav-mobile-lien-publier:hover {
+  background-color: #0d1a2e;
+  color: #4f9cf9;
+}
+
+/* Point rouge sur le lien Nouveautés dans le menu */
+.nav-lien-badge {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ff4444;
+  margin-left: auto;
+  flex-shrink: 0;
+  animation: badge-pulse 2s ease-in-out infinite;
+}
+
+@keyframes badge-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.6; transform: scale(0.8); }
+}
+
+.nav-mobile-lien-deconnexion {
+  color: #ff4444;
+}
+.nav-mobile-lien-deconnexion:hover {
+  background-color: rgba(255,68,68,0.08);
+  color: #ff4444;
+}

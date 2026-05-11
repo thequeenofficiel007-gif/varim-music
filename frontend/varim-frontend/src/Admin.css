@@ -1,0 +1,189 @@
+.adm-page { min-height: 100vh; background-color: #0a0e1a; color: #ffffff; padding-bottom: 80px; }
+
+.adm-header { display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; background-color: #0d1226; border-bottom: 1px solid #1e2a4a; position: sticky; top: 0; z-index: 100; }
+.adm-header-logo { display: flex; align-items: center; gap: 8px; cursor: pointer; color: #4f9cf9; font-size: 18px; font-weight: bold; }
+.adm-logo-img { width: 32px; height: 32px; object-fit: cover; border-radius: 6px; }
+
+.adm-contenu { padding: 16px 16px 0; }
+
+.adm-titre-wrapper { display: flex; align-items: center; gap: 8px; color: #4f9cf9; margin-bottom: 16px; }
+.adm-titre { font-size: 20px; font-weight: bold; color: #ffffff; margin: 0; }
+
+.adm-message { display: flex; align-items: center; gap: 8px; padding: 11px 14px; border-radius: 10px; font-size: 13px; margin-bottom: 14px; }
+.adm-message.succes { background-color: rgba(72,187,120,0.1); color: #48bb78; border: 1px solid rgba(72,187,120,0.3); }
+.adm-message.erreur { background-color: rgba(255,68,68,0.1); color: #ff4444; border: 1px solid rgba(255,68,68,0.3); }
+
+.adm-alerte { display: flex; align-items: center; gap: 8px; padding: 12px 14px; background-color: rgba(246,173,85,0.1); border: 1px solid rgba(246,173,85,0.4); border-radius: 10px; color: #f6ad55; font-size: 13px; margin-bottom: 14px; cursor: pointer; }
+.adm-alerte-arrow { margin-left: auto; }
+
+/* FILTRE PÉRIODE */
+.adm-filtres-periode { display: flex; gap: 6px; overflow-x: auto; margin-bottom: 12px; scrollbar-width: none; padding-bottom: 4px; }
+.adm-filtres-periode::-webkit-scrollbar { display: none; }
+.adm-filtre-btn { padding: 6px 14px; background-color: #0d1226; border: 1px solid #1e2a4a; border-radius: 20px; color: #a0aec0; font-size: 12px; cursor: pointer; white-space: nowrap; transition: all 0.15s; flex-shrink: 0; }
+.adm-filtre-btn.actif { background-color: #4f9cf9; border-color: #4f9cf9; color: #ffffff; }
+
+.adm-filtre-perso { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; flex-wrap: wrap; }
+.adm-filtre-perso input { padding: 8px 10px; background-color: #0d1226; border: 1px solid #1e2a4a; border-radius: 8px; color: #ffffff; font-size: 13px; outline: none; }
+.adm-filtre-perso input:focus { border-color: #4f9cf9; }
+.adm-filtre-perso span { color: #a0aec0; }
+.adm-btn-appliquer { padding: 8px 16px; background-color: #4f9cf9; border: none; border-radius: 8px; color: #ffffff; font-size: 13px; cursor: pointer; }
+
+/* STATS */
+.adm-stats-grille { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 16px; }
+.adm-stat-card { background-color: #0d1226; border: 1px solid #1e2a4a; border-radius: 12px; padding: 12px; display: flex; flex-direction: column; gap: 6px; }
+.adm-stat-card.highlight { border-color: rgba(246,173,85,0.5); }
+.adm-stat-ic { width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.adm-stat-ic.blue { background-color: rgba(79,156,249,0.15); color: #4f9cf9; }
+.adm-stat-ic.purple { background-color: rgba(147,51,234,0.15); color: #a855f7; }
+.adm-stat-ic.green { background-color: rgba(72,187,120,0.15); color: #48bb78; }
+.adm-stat-ic.orange { background-color: rgba(246,173,85,0.15); color: #f6ad55; }
+.adm-stat-ic.gold { background-color: rgba(234,179,8,0.15); color: #eab308; }
+.adm-stat-ic.teal { background-color: rgba(20,184,166,0.15); color: #14b8a6; }
+.adm-stat-val { font-size: 15px; font-weight: bold; color: #ffffff; margin: 0; line-height: 1; }
+.adm-stat-val.gold { color: #eab308; }
+.adm-stat-lab { font-size: 10px; color: #a0aec0; margin: 0; }
+
+/* ONGLETS */
+.adm-onglets { display: flex; gap: 6px; overflow-x: auto; margin-bottom: 16px; scrollbar-width: none; padding-bottom: 4px; }
+.adm-onglets::-webkit-scrollbar { display: none; }
+.adm-onglet { display: flex; align-items: center; gap: 5px; padding: 8px 12px; background-color: #0d1226; border: 1px solid #1e2a4a; border-radius: 10px; color: #a0aec0; cursor: pointer; font-size: 12px; white-space: nowrap; flex-shrink: 0; transition: all 0.15s; }
+.adm-onglet.actif { background-color: #4f9cf9; border-color: #4f9cf9; color: #ffffff; }
+
+/* SECTION */
+.adm-section { background-color: #0d1226; border: 1px solid #1e2a4a; border-radius: 14px; padding: 16px; }
+.adm-section-titre { font-size: 15px; font-weight: bold; color: #ffffff; margin: 0 0 16px; }
+.adm-sous-titre { font-size: 13px; font-weight: bold; color: #a0aec0; margin: 20px 0 10px; }
+
+/* COMPTABILITÉ */
+.adm-compta-grille { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 8px; }
+.adm-compta-card { background-color: #1a2035; border: 1px solid #1e2a4a; border-radius: 10px; padding: 12px; }
+.adm-compta-card.highlight { border-color: rgba(234,179,8,0.4); }
+.adm-compta-label { font-size: 11px; color: #a0aec0; margin: 0 0 6px; }
+.adm-compta-val { font-size: 16px; font-weight: bold; color: #ffffff; margin: 0; }
+.adm-compta-val.blue { color: #4f9cf9; }
+.adm-compta-val.green { color: #48bb78; }
+.adm-compta-val.gold { color: #eab308; }
+.adm-compta-val.orange { color: #f6ad55; }
+
+/* OPS */
+.adm-ops-grille { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.adm-op-card { background-color: #1a2035; border: 1px solid #1e2a4a; border-radius: 10px; padding: 12px; }
+.adm-op-card.mtn { border-color: rgba(255,204,0,0.3); }
+.adm-op-card.airtel { border-color: rgba(255,0,0,0.3); }
+.adm-op-lignes { margin-top: 10px; display: flex; flex-direction: column; gap: 6px; }
+.adm-op-ligne { display: flex; justify-content: space-between; font-size: 12px; color: #a0aec0; }
+.adm-op-ligne strong { color: #ffffff; }
+.adm-op-ligne strong.gold { color: #eab308; }
+
+.adm-op-badge { padding: 3px 8px; border-radius: 5px; font-size: 11px; font-weight: bold; flex-shrink: 0; }
+.adm-op-badge.mtn { background-color: #ffcc00; color: #000000; }
+.adm-op-badge.airtel { background-color: #ff0000; color: #ffffff; }
+
+/* HISTORIQUE JOURS */
+.adm-historique-liste { display: flex; flex-direction: column; gap: 4px; }
+.adm-hist-ligne { display: flex; align-items: center; gap: 10px; padding: 8px 10px; background-color: #1a2035; border-radius: 8px; font-size: 12px; }
+.adm-hist-date { color: #a0aec0; min-width: 80px; }
+.adm-hist-ventes { color: #ffffff; flex: 1; }
+.adm-hist-ca { color: #4f9cf9; }
+.adm-hist-comm { color: #eab308; font-weight: bold; }
+
+/* VENTES */
+.adm-ventes-liste { display: flex; flex-direction: column; gap: 8px; }
+.adm-vente-ligne { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; padding: 12px; background-color: #1a2035; border-radius: 10px; }
+.adm-vente-infos { flex: 1; min-width: 0; }
+.adm-vente-titre { font-size: 13px; font-weight: 600; color: #ffffff; margin: 0 0 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.adm-vente-meta { font-size: 11px; color: #a0aec0; margin: 0 0 3px; }
+.adm-vente-date { font-size: 11px; color: #4a5568; margin: 0; }
+.adm-vente-droite { text-align: right; flex-shrink: 0; display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
+.adm-vente-montant { font-size: 14px; font-weight: bold; color: #4f9cf9; margin: 0; }
+.adm-vente-comm { font-size: 11px; color: #eab308; margin: 0; }
+
+.adm-badge { padding: 2px 7px; border-radius: 5px; font-size: 10px; font-weight: 600; background-color: #1e2a4a; color: #a0aec0; }
+.adm-badge.artiste { background-color: rgba(79,156,249,0.2); color: #4f9cf9; }
+.adm-badge.acheteur { background-color: rgba(72,187,120,0.2); color: #48bb78; }
+.adm-badge.admin { background-color: rgba(246,173,85,0.2); color: #f6ad55; }
+
+/* RETRAITS */
+.adm-retraits-liste { display: flex; flex-direction: column; gap: 10px; }
+.adm-retrait-carte { background-color: #1a2035; border: 1px solid #1e2a4a; border-radius: 12px; overflow: hidden; }
+.adm-retrait-artiste { display: flex; align-items: center; gap: 10px; padding: 12px; cursor: pointer; background-color: #1a2035; transition: background 0.15s; border-bottom: 1px solid #1e2a4a; }
+.adm-retrait-artiste:hover { background-color: #202840; }
+.adm-retrait-avatar { width: 38px; height: 38px; border-radius: 50%; background-color: #4f9cf9; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: bold; color: #ffffff; overflow: hidden; flex-shrink: 0; }
+.adm-retrait-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.adm-retrait-nom { font-size: 14px; font-weight: 600; color: #ffffff; margin: 0 0 2px; }
+.adm-retrait-tel { font-size: 12px; color: #a0aec0; margin: 0; }
+.adm-retrait-arrow { margin-left: auto; color: #4f9cf9; }
+.adm-retrait-details { padding: 12px; display: flex; flex-direction: column; gap: 8px; }
+.adm-retrait-ligne { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.adm-retrait-numero { font-size: 13px; color: #ffffff; flex: 1; }
+.adm-retrait-montant { font-size: 15px; font-weight: bold; color: #f6ad55; }
+.adm-retrait-date { display: flex; align-items: center; gap: 4px; font-size: 11px; color: #4a5568; }
+.adm-retrait-statut { display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 3px 8px; border-radius: 6px; margin-left: auto; }
+.adm-retrait-statut.en_attente { background-color: rgba(246,173,85,0.15); color: #f6ad55; }
+.adm-retrait-statut.traite { background-color: rgba(72,187,120,0.15); color: #48bb78; }
+.adm-retrait-statut.annule { background-color: rgba(255,68,68,0.15); color: #ff4444; }
+.adm-retrait-actions { display: flex; gap: 8px; }
+.adm-btn-traiter { display: flex; align-items: center; gap: 5px; padding: 8px 14px; background-color: rgba(72,187,120,0.15); border: 1px solid rgba(72,187,120,0.4); border-radius: 8px; color: #48bb78; font-size: 12px; font-weight: bold; cursor: pointer; }
+.adm-btn-annuler { display: flex; align-items: center; gap: 5px; padding: 8px 14px; background-color: rgba(255,68,68,0.1); border: 1px solid rgba(255,68,68,0.3); border-radius: 8px; color: #ff4444; font-size: 12px; font-weight: bold; cursor: pointer; }
+
+/* UTILISATEURS */
+.adm-users-liste { display: flex; flex-direction: column; gap: 8px; }
+.adm-user-ligne { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 12px; background-color: #1a2035; border-radius: 10px; }
+.adm-user-infos { display: flex; align-items: center; gap: 10px; flex: 1; min-width: 0; }
+.adm-user-avatar { width: 36px; height: 36px; border-radius: 50%; background-color: #4f9cf9; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: bold; color: #ffffff; flex-shrink: 0; }
+.adm-user-nom { font-size: 13px; font-weight: 600; color: #ffffff; margin: 0 0 3px; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.adm-user-meta { font-size: 11px; color: #a0aec0; margin: 0 0 2px; }
+.adm-user-stats { font-size: 11px; color: #4f9cf9; margin: 0; }
+.adm-user-actions { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; flex-shrink: 0; }
+.adm-user-statut { display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 3px 8px; border-radius: 6px; }
+.adm-user-statut.actif { background-color: rgba(72,187,120,0.15); color: #48bb78; }
+.adm-user-statut.bloque { background-color: rgba(255,68,68,0.15); color: #ff4444; }
+.adm-btn-bloquer { display: flex; align-items: center; gap: 4px; padding: 6px 10px; background: transparent; border: 1px solid rgba(255,68,68,0.4); border-radius: 7px; color: #ff4444; font-size: 11px; cursor: pointer; }
+.adm-btn-debloquer { display: flex; align-items: center; gap: 4px; padding: 6px 10px; background: transparent; border: 1px solid rgba(72,187,120,0.4); border-radius: 7px; color: #48bb78; font-size: 11px; cursor: pointer; }
+
+/* TOP ARTISTES */
+.adm-artistes-liste { display: flex; flex-direction: column; gap: 8px; }
+.adm-artiste-ligne { display: flex; align-items: center; gap: 10px; padding: 12px; background-color: #1a2035; border-radius: 10px; }
+.adm-artiste-rang { font-size: 16px; font-weight: 900; color: #4f9cf9; opacity: 0.4; min-width: 22px; text-align: center; }
+.adm-artiste-avatar { width: 40px; height: 40px; border-radius: 50%; background-color: #4f9cf9; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: bold; color: #ffffff; overflow: hidden; flex-shrink: 0; }
+.adm-artiste-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.adm-artiste-infos { flex: 1; min-width: 0; }
+.adm-artiste-nom { font-size: 13px; font-weight: 600; color: #ffffff; margin: 0 0 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.adm-artiste-meta { font-size: 11px; color: #a0aec0; margin: 0; }
+.adm-artiste-stats { text-align: right; flex-shrink: 0; }
+.adm-artiste-ventes { font-size: 12px; color: #a0aec0; margin: 0 0 2px; }
+.adm-artiste-revenus { font-size: 13px; font-weight: bold; color: #4f9cf9; margin: 0 0 1px; }
+.adm-artiste-comm { font-size: 10px; color: #eab308; margin: 0; }
+
+/* MODAL */
+.adm-modal-overlay { position: fixed; inset: 0; background-color: rgba(0,0,0,0.75); z-index: 600; display: flex; align-items: center; justify-content: center; padding: 20px; }
+.adm-modal { background-color: #0d1226; border: 1px solid #1e2a4a; border-radius: 16px; padding: 24px; width: 100%; max-width: 380px; position: relative; }
+.adm-modal-fermer { position: absolute; top: 14px; right: 14px; background: none; border: none; color: #a0aec0; cursor: pointer; }
+.adm-modal-avatar { width: 72px; height: 72px; border-radius: 50%; background-color: #4f9cf9; display: flex; align-items: center; justify-content: center; font-size: 28px; font-weight: bold; color: #ffffff; overflow: hidden; margin: 0 auto 12px; border: 2px solid #4f9cf9; }
+.adm-modal-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.adm-modal-nom { font-size: 18px; font-weight: bold; color: #ffffff; text-align: center; margin: 0 0 4px; }
+.adm-modal-tel { font-size: 13px; color: #a0aec0; text-align: center; margin: 0 0 20px; }
+.adm-modal-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 18px; }
+.adm-modal-stat { background-color: #1a2035; border-radius: 10px; padding: 10px; text-align: center; }
+.adm-modal-stat-val { font-size: 16px; font-weight: bold; color: #ffffff; margin: 0 0 3px; }
+.adm-modal-stat-val.gold { color: #eab308; }
+.adm-modal-stat-val.orange { color: #f6ad55; }
+.adm-modal-stat-val.blue { color: #4f9cf9; }
+.adm-modal-stat-lab { font-size: 10px; color: #a0aec0; margin: 0; }
+.adm-modal-retrait-info { background-color: #1a2035; border: 1px solid #1e2a4a; border-radius: 10px; padding: 12px; text-align: center; }
+.adm-modal-retrait-info p { font-size: 13px; color: #a0aec0; margin: 0 0 6px; display: flex; align-items: center; justify-content: center; gap: 6px; flex-wrap: wrap; }
+.adm-modal-retrait-info p:last-child { margin: 0; }
+
+.adm-vide { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 40px 20px; color: #a0aec0; text-align: center; }
+.adm-chargement { text-align: center; color: #a0aec0; padding: 80px 20px; }
+.gold { color: #eab308 !important; }
+.blue { color: #4f9cf9 !important; }
+.orange { color: #f6ad55 !important; }
+
+@media (min-width: 769px) {
+  .adm-header { padding: 14px 40px; }
+  .adm-contenu { max-width: 1000px; margin: 0 auto; padding: 30px 40px 0; }
+  .adm-stats-grille { grid-template-columns: repeat(6, 1fr); }
+  .adm-compta-grille { grid-template-columns: repeat(4, 1fr); }
+  .adm-modal-stats { grid-template-columns: repeat(5, 1fr); }
+}

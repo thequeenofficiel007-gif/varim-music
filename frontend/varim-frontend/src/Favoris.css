@@ -1,0 +1,66 @@
+.fav-page { min-height: 100vh; background-color: #0a0e1a; color: #ffffff; padding-bottom: 100px; }
+
+.fav-header { display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; background-color: #0d1226; border-bottom: 1px solid #1e2a4a; position: sticky; top: 0; z-index: 100; }
+.fav-header-logo { display: flex; align-items: center; gap: 8px; cursor: pointer; color: #4f9cf9; font-size: 18px; font-weight: bold; }
+.fav-logo-img { width: 32px; height: 32px; object-fit: cover; border-radius: 6px; }
+
+.fav-contenu { padding: 16px 16px 0; }
+
+.fav-titre-wrapper { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+.fav-titre-ic { flex-shrink: 0; }
+.fav-titre { font-size: 20px; font-weight: bold; color: #ffffff; margin: 0 0 2px; }
+.fav-sous-titre { font-size: 13px; color: #a0aec0; margin: 0; }
+
+.fav-filtres { display: flex; gap: 8px; margin-bottom: 18px; overflow-x: auto; scrollbar-width: none; padding-bottom: 4px; }
+.fav-filtres::-webkit-scrollbar { display: none; }
+.fav-filtre-btn { padding: 6px 16px; background-color: #0d1226; border: 1px solid #1e2a4a; border-radius: 20px; color: #a0aec0; font-size: 13px; cursor: pointer; white-space: nowrap; flex-shrink: 0; transition: all 0.2s; }
+.fav-filtre-btn.actif { background-color: #ff4d6d; border-color: #ff4d6d; color: #ffffff; }
+
+.fav-chargement { text-align: center; color: #a0aec0; padding: 60px 20px; }
+
+.fav-vide { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 60px 20px; text-align: center; }
+.fav-vide-ic { color: #1e2a4a; }
+.fav-vide h2 { font-size: 18px; font-weight: bold; color: #ffffff; margin: 0; }
+.fav-vide p { font-size: 14px; color: #a0aec0; margin: 0; max-width: 280px; line-height: 1.5; }
+.fav-btn-catalogue { padding: 12px 24px; background-color: #ff4d6d; border: none; border-radius: 20px; color: #ffffff; font-size: 14px; font-weight: bold; cursor: pointer; margin-top: 4px; }
+
+.fav-liste { display: flex; flex-direction: column; gap: 8px; }
+
+.fav-ligne { display: flex; align-items: center; gap: 12px; padding: 12px; background-color: #0d1226; border: 1px solid #1e2a4a; border-radius: 12px; transition: border-color 0.15s; }
+.fav-ligne:hover { border-color: #2a3a5a; }
+.fav-ligne.en-lecture { border-color: rgba(255,77,109,0.4); background-color: rgba(255,77,109,0.05); }
+
+.fav-pochette { position: relative; width: 56px; height: 56px; border-radius: 10px; overflow: hidden; flex-shrink: 0; cursor: pointer; background-color: #1a2035; }
+.fav-pochette img { width: 100%; height: 100%; object-fit: cover; }
+.fav-pochette-vide { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #4f9cf9; }
+.fav-play-overlay { position: absolute; inset: 0; background-color: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; color: #ffffff; opacity: 0; transition: opacity 0.2s; }
+.fav-pochette:hover .fav-play-overlay { opacity: 1; }
+
+.fav-infos { flex: 1; min-width: 0; }
+.fav-info-titre { font-size: 14px; font-weight: 600; color: #ffffff; margin: 0 0 3px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.fav-info-artiste { display: flex; align-items: center; gap: 4px; font-size: 12px; color: #4f9cf9; margin: 0 0 2px; cursor: pointer; }
+.fav-info-artiste:hover { text-decoration: underline; }
+.fav-info-album { display: flex; align-items: center; gap: 4px; font-size: 11px; color: #4a5568; margin: 0 0 4px; }
+.fav-info-bas { display: flex; align-items: center; gap: 8px; }
+.fav-type-badge { font-size: 10px; padding: 2px 7px; border-radius: 5px; font-weight: 600; text-transform: uppercase; }
+.fav-type-badge.single { background-color: rgba(79,156,249,0.15); color: #4f9cf9; }
+.fav-type-badge.album  { background-color: rgba(168,85,247,0.15); color: #a855f7; }
+.fav-type-badge.piste  { background-color: rgba(72,187,120,0.15); color: #48bb78; }
+.fav-prix { font-size: 12px; font-weight: bold; color: #4f9cf9; }
+
+.fav-actions { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
+
+.fav-btn-play { width: 34px; height: 34px; border-radius: 50%; background-color: #4f9cf9; border: none; color: #ffffff; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background 0.2s; }
+.fav-btn-play.actif { background-color: #3a7fd4; }
+.fav-btn-play:hover { background-color: #3a7fd4; }
+
+.fav-btn-acheter { width: 30px; height: 30px; border-radius: 8px; background-color: #1a2035; border: 1px solid #1e2a4a; color: #a0aec0; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.2s; }
+.fav-btn-acheter:hover { border-color: #4f9cf9; color: #4f9cf9; }
+
+.fav-btn-retirer { width: 30px; height: 30px; border-radius: 8px; background: transparent; border: none; color: #ff4d6d; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: transform 0.15s; }
+.fav-btn-retirer:hover { transform: scale(1.2); }
+
+@media (min-width: 769px) {
+  .fav-header { padding: 14px 40px; }
+  .fav-contenu { max-width: 700px; margin: 0 auto; padding: 30px 40px 0; }
+}

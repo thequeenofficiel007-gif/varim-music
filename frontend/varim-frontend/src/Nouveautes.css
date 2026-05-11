@@ -1,0 +1,127 @@
+.nouv-page { min-height: 100vh; background-color: #0a0e1a; color: #ffffff; padding-bottom: 100px; }
+
+.nouv-header { display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; background-color: #0d1226; border-bottom: 1px solid #1e2a4a; position: sticky; top: 0; z-index: 100; }
+.nouv-header-logo { display: flex; align-items: center; gap: 8px; cursor: pointer; color: #4f9cf9; font-size: 18px; font-weight: bold; }
+.nouv-logo-img { width: 32px; height: 32px; object-fit: cover; border-radius: 6px; }
+
+.nouv-contenu { padding: 16px 16px 0; }
+
+.nouv-titre-wrapper { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+.nouv-titre-ic { color: #4f9cf9; flex-shrink: 0; }
+.nouv-titre { font-size: 20px; font-weight: bold; color: #ffffff; margin: 0 0 2px; }
+.nouv-sous-titre { font-size: 13px; color: #a0aec0; margin: 0; }
+
+.nouv-chargement { text-align: center; color: #a0aec0; padding: 60px 20px; }
+
+/* VIDE */
+.nouv-vide { display: flex; flex-direction: column; align-items: center; gap: 14px; padding: 60px 20px; text-align: center; }
+.nouv-vide-ic { color: #1e2a4a; }
+.nouv-vide h2 { font-size: 18px; font-weight: bold; color: #ffffff; margin: 0; }
+.nouv-vide p { font-size: 14px; color: #a0aec0; margin: 0; max-width: 280px; line-height: 1.5; }
+.nouv-btn-catalogue { display: flex; align-items: center; gap: 8px; padding: 12px 24px; background-color: #4f9cf9; border: none; border-radius: 20px; color: #ffffff; font-size: 14px; font-weight: bold; cursor: pointer; margin-top: 4px; transition: background 0.2s; }
+.nouv-btn-catalogue:hover { background-color: #3a7fd4; }
+
+/* LABEL NOUVELLES */
+.nouv-nouvelles-label { font-size: 12px; color: #4f9cf9; font-weight: 600; margin-bottom: 10px; padding: 6px 12px; background-color: rgba(79,156,249,0.1); border-radius: 8px; display: inline-block; }
+
+/* LISTE */
+.nouv-liste { display: flex; flex-direction: column; gap: 8px; }
+
+.nouv-ligne { position: relative; display: flex; align-items: center; gap: 12px; padding: 12px; background-color: #0d1226; border: 1px solid #1e2a4a; border-radius: 12px; cursor: pointer; transition: border-color 0.15s; }
+.nouv-ligne:hover { border-color: #2a3a5a; }
+.nouv-ligne.nouvelle { border-color: rgba(79,156,249,0.4); background-color: #0a1628; }
+
+.nouv-badge-new { position: absolute; top: -8px; left: 12px; background-color: #4f9cf9; color: #ffffff; font-size: 10px; font-weight: bold; padding: 2px 8px; border-radius: 6px; }
+
+.nouv-pochette { position: relative; width: 56px; height: 56px; border-radius: 10px; overflow: hidden; flex-shrink: 0; background-color: #1a2035; }
+.nouv-pochette img { width: 100%; height: 100%; object-fit: cover; }
+.nouv-pochette-vide { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #4f9cf9; }
+.nouv-type-badge { position: absolute; bottom: 3px; right: 3px; background-color: rgba(79,156,249,0.9); color: #fff; font-size: 9px; padding: 1px 5px; border-radius: 4px; text-transform: uppercase; font-weight: 600; }
+
+.nouv-infos { flex: 1; min-width: 0; }
+.nouv-info-titre { font-size: 14px; font-weight: 600; color: #ffffff; margin: 0 0 3px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.nouv-info-artiste { display: flex; align-items: center; gap: 4px; font-size: 12px; color: #4f9cf9; margin: 0 0 3px; cursor: pointer; }
+.nouv-info-artiste:hover { text-decoration: underline; }
+.nouv-info-date { font-size: 11px; color: #4a5568; margin: 0; }
+
+.nouv-prix { font-size: 13px; font-weight: bold; color: #4f9cf9; flex-shrink: 0; }
+
+/* BOTTOM SHEET */
+.nouv-bs-overlay { position: fixed; inset: 0; background-color: rgba(0,0,0,0.7); z-index: 500; display: flex; align-items: flex-end; }
+.nouv-bottom-sheet { width: 100%; background-color: #0d1226; border-top: 1px solid #1e2a4a; border-radius: 20px 20px 0 0; padding-bottom: 30px; animation: nouvSlideUp 0.25s ease; }
+@keyframes nouvSlideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
+.nouv-bs-drag { width: 40px; height: 4px; background-color: #1e2a4a; border-radius: 2px; margin: 12px auto 0; }
+.nouv-bs-contenu { padding: 16px 20px 0; }
+.nouv-bs-haut { display: flex; gap: 14px; margin-bottom: 18px; }
+.nouv-bs-pochette { position: relative; width: 80px; height: 80px; border-radius: 10px; overflow: hidden; flex-shrink: 0; background-color: #1a2035; }
+.nouv-bs-pochette img { width: 100%; height: 100%; object-fit: cover; }
+.nouv-bs-pochette-vide { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #4f9cf9; }
+.nouv-bs-meta { display: flex; flex-direction: column; justify-content: center; gap: 4px; flex: 1; }
+.nouv-bs-titre { font-size: 16px; font-weight: bold; color: #ffffff; margin: 0; }
+.nouv-bs-artiste { display: flex; align-items: center; gap: 5px; font-size: 13px; color: #4f9cf9; cursor: pointer; margin: 0; }
+.nouv-bs-date { font-size: 11px; color: #4a5568; margin: 0; }
+.nouv-bs-prix { font-size: 15px; font-weight: bold; color: #4f9cf9; margin: 0; }
+.nouv-bs-actions { display: flex; flex-direction: column; gap: 10px; }
+.nouv-bs-btn-extrait { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 13px; background: transparent; border: 1px solid #4f9cf9; border-radius: 12px; color: #4f9cf9; font-size: 14px; cursor: pointer; transition: all 0.2s; }
+.nouv-bs-btn-extrait:hover { background-color: #4f9cf9; color: #ffffff; }
+.nouv-bs-btn-acheter { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 13px; background-color: #4f9cf9; border: none; border-radius: 12px; color: #ffffff; font-size: 14px; font-weight: bold; cursor: pointer; }
+.nouv-bs-btn-acheter:hover { background-color: #3a7fd4; }
+.nouv-bs-btn-partager { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 12px; background: transparent; border: 1px solid #1e2a4a; border-radius: 12px; color: #a0aec0; font-size: 14px; cursor: pointer; transition: all 0.2s; }
+.nouv-bs-btn-partager:hover { border-color: #4f9cf9; color: #4f9cf9; }
+
+@media (min-width: 769px) {
+  .nouv-header { padding: 14px 40px; }
+  .nouv-contenu { max-width: 700px; margin: 0 auto; padding: 30px 40px 0; }
+}
+
+/* Ligne nouvelle publication */
+.nouv-ligne.nouvelle {
+  border-color: rgba(79,156,249,0.3);
+  background-color: rgba(79,156,249,0.04);
+}
+
+.nouv-btn-play {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: #4f9cf9;
+  border: none;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.nouv-btn-acheter {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: transparent;
+  border: 1px solid #1e2a4a;
+  color: #a0aec0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.nouv-btn-acheter:hover { border-color: #4f9cf9; color: #4f9cf9; }
+
+.nouv-type-badge.single { background-color: rgba(79,156,249,0.15); color: #4f9cf9; }
+.nouv-type-badge.album  { background-color: rgba(168,85,247,0.15); color: #a855f7; }
+
+.nouv-vide-ic { color: #1e2a4a; }
+.nouv-btn-catalogue {
+  padding: 12px 24px;
+  background-color: #4f9cf9;
+  border: none;
+  border-radius: 20px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 4px;
+}

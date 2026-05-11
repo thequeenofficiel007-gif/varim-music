@@ -1,0 +1,127 @@
+.partager-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+}
+
+.partager-modal {
+  background-color: #0d1226;
+  border: 1px solid #1e2a4a;
+  border-radius: 16px;
+  padding: 25px;
+  width: 100%;
+  max-width: 380px;
+}
+
+.partager-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.partager-header h3 {
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.partager-fermer {
+  background: none;
+  border: none;
+  color: #a0aec0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.partager-fermer:hover {
+  color: #ffffff;
+}
+
+.partager-titre {
+  color: #a0aec0;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.partager-reseaux {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.partager-reseau {
+  flex: 1;
+  padding: 12px 8px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: #ffffff;
+}
+
+.reseau-icone {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.partager-reseau.whatsapp {
+  background-color: #25d366;
+}
+
+.partager-reseau.facebook {
+  background-color: #1877f2;
+}
+
+.partager-reseau.twitter {
+  background-color: #000000;
+  border: 1px solid #333;
+}
+
+.partager-lien {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.partager-lien-input {
+  flex: 1;
+  padding: 10px 12px;
+  background-color: #1a2035;
+  border: 1px solid #1e2a4a;
+  border-radius: 8px;
+  color: #a0aec0;
+  font-size: 12px;
+  outline: none;
+}
+
+.partager-copier {
+  padding: 10px 15px;
+  background-color: #4f9cf9;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.partager-copier:hover {
+  background-color: #3a7fd4;
+}
