@@ -15,7 +15,7 @@ function SingleDetail({ allerVers, utilisateur, musiqueId, handleDeconnexion }) 
   const audioRef = useRef(null);
 
   useEffect(() => {
-    fetch('/api/musiques')
+    fetch('https://varim-music.onrender.com/api/musiques')
       .then(res => res.json())
       .then(data => {
         const m = (data.musiques || []).find(m => m.id === parseInt(musiqueId));

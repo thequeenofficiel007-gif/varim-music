@@ -52,7 +52,7 @@ function MonCompte({ allerVers, utilisateur, setUtilisateur, handleDeconnexion }
       formData.append('numero_mtn', numeroMtn);
       formData.append('numero_airtel', numeroAirtel);
       if (photo) formData.append('photo', photo);
-      const reponse = await fetch('/api/profil/modifier', { method: 'PUT', body: formData });
+      const reponse = await fetch('https://varim-music.onrender.com/api/profil/modifier', { method: 'PUT', body: formData });
       const donnees = await reponse.json();
       if (reponse.ok) {
         setMessage({ texte: 'Profil mis à jour avec succès !', type: 'succes' });

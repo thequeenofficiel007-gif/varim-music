@@ -14,7 +14,7 @@ function TopVentes({ allerVers, utilisateur, handleDeconnexion }) {
   const [partagerMusique, setPartagerMusique] = useState(null);
 
   useEffect(() => {
-    fetch('/api/musiques/top-ventes')
+    fetch('https://varim-music.onrender.com/api/musiques/top-ventes')
       .then(res => res.json())
       .then(data => { setMusiques(data.musiques || []); setChargement(false); })
       .catch(() => setChargement(false));

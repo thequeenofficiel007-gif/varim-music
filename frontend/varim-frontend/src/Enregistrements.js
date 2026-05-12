@@ -16,7 +16,7 @@ function Enregistrements({ allerVers, utilisateur, handleDeconnexion }) {
   }, [utilisateur]);
 
   const retirer = async (enregistrement) => {
-    await fetch('/api/enregistrements', {
+    await fetch('https://varim-music.onrender.com/api/enregistrements', {
       method: 'DELETE',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ utilisateur_id: utilisateur.id, musique_id: enregistrement.musique_id })

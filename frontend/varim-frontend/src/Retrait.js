@@ -42,7 +42,7 @@ function Retrait({ allerVers, utilisateur, handleDeconnexion }) {
 
     setChargement(true);
     try {
-      const reponse = await fetch('/api/retraits', {
+      const reponse = await fetch('https://varim-music.onrender.com/api/retraits', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ artiste_id: utilisateur.id, operateur, montant: parseInt(montant) })

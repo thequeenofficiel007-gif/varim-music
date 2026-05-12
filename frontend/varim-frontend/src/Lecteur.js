@@ -42,10 +42,10 @@ function Lecteur({ piste, playlist, onPisteChange, onFermer }) {
     const body = { utilisateur_id: u.id, musique_id: musiqueId, piste_id: pisteId || null };
 
     if (aime) {
-      const r = await fetch('/api/favoris', { method: 'DELETE', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+      const r = await fetch('https://varim-music.onrender.com/api/favoris', { method: 'DELETE', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
       if (r.ok) setAime(false);
     } else {
-      const r = await fetch('/api/favoris', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+      const r = await fetch('https://varim-music.onrender.com/api/favoris', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
       if (r.ok || r.status === 400) setAime(true); // 400 = déjà en favori
     }
   };

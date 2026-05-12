@@ -47,7 +47,7 @@ function VerifierPin({ utilisateur, onSuccess, onCancel, titre }) {
     setChargement(true);
     setMessage({ texte: '', type: '' });
     try {
-      const reponse = await fetch('/api/auth/verifier-pin', {
+      const reponse = await fetch('https://varim-music.onrender.com/api/auth/verifier-pin', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ utilisateur_id: utilisateur.id, pin: code })

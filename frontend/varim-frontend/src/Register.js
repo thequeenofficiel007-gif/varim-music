@@ -43,7 +43,7 @@ function Register({ allerVers }) {
   const handleInscription = async () => {
     setChargement(true);
     try {
-      const reponse = await fetch('/api/auth/inscription', {
+      const reponse = await fetch('https://varim-music.onrender.com/api/auth/inscription', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prenom, telephone, mot_de_passe: motDePasse, confirmation_mot_de_passe: confirmationMotDePasse, pin, role })

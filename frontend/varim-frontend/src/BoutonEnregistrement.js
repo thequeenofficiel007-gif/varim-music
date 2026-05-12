@@ -19,14 +19,14 @@ function BoutonEnregistrement({ utilisateur, musiqueId, style = 'rond' }) {
     setChargement(true);
     try {
       if (estEnregistre) {
-        const r = await fetch('/api/enregistrements', {
+        const r = await fetch('https://varim-music.onrender.com/api/enregistrements', {
           method: 'DELETE',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ utilisateur_id: utilisateur.id, musique_id: musiqueId })
         });
         if (r.ok) setEstEnregistre(false);
       } else {
-        const r = await fetch('/api/enregistrements', {
+        const r = await fetch('https://varim-music.onrender.com/api/enregistrements', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ utilisateur_id: utilisateur.id, musique_id: musiqueId })

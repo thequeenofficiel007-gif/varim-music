@@ -11,7 +11,7 @@ function Achat({ allerVers, utilisateur, musiqueId }) {
   const [message, setMessage] = useState({ texte: '', type: '' });
 
   useEffect(() => {
-    fetch('/api/musiques')
+    fetch('https://varim-music.onrender.com/api/musiques')
       .then(res => res.json())
       .then(data => {
         const m = data.musiques.find(m => m.id === parseInt(musiqueId));
@@ -42,7 +42,7 @@ function Achat({ allerVers, utilisateur, musiqueId }) {
     setChargement(true);
     setMessage({ texte: '', type: '' });
     try {
-      const reponse = await fetch('/api/achats', {
+      const reponse = await fetch('https://varim-music.onrender.com/api/achats', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ acheteur_id: utilisateur.id, musique_id: parseInt(musiqueId), operateur, numero_paiement: numero })
@@ -51,7 +51,7 @@ function Achat({ allerVers, utilisateur, musiqueId }) {
 
       // MODE SIMULÉ — confirmation immédiate
       if (reponse.status === 201) {
-        await fetch('/api/auth/sauvegarder-numero', {
+        await fetch('https://varim-music.onrender.com/api/auth/sauvegarder-numero', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ utilisateur_id: utilisateur.id, numero_paiement_prefere: numero })

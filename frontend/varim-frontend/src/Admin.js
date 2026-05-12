@@ -59,7 +59,7 @@ function Admin({ allerVers, utilisateur, handleDeconnexion }) {
 
   const traiterRetrait = async (retraitId, statut) => {
     try {
-      const rep = await fetch('/api/admin/retrait', {
+      const rep = await fetch('https://varim-music.onrender.com/api/admin/retrait', {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ retrait_id: retraitId, statut })
@@ -73,7 +73,7 @@ function Admin({ allerVers, utilisateur, handleDeconnexion }) {
 
   const bloquerUtilisateur = async (id, bloquer) => {
     try {
-      const rep = await fetch('/api/admin/bloquer', {
+      const rep = await fetch('https://varim-music.onrender.com/api/admin/bloquer', {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ utilisateur_id: id, bloquer })

@@ -24,7 +24,7 @@ function Favoris({ allerVers, utilisateur, handleDeconnexion }) {
   };
 
   const retirerFavori = async (favori) => {
-    await fetch('/api/favoris', {
+    await fetch('https://varim-music.onrender.com/api/favoris', {
       method: 'DELETE',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

@@ -26,11 +26,11 @@ function Catalogue({ allerVers, utilisateur, handleDeconnexion }) {
   useEffect(() => {
     // Chaque section charge ses propres données — jamais tout en même temps
     Promise.all([
-      fetch('/api/musiques/nouveautes').then(r => r.json()),
-      fetch('/api/musiques/top-ventes').then(r => r.json()),
-      fetch('/api/musiques/top-singles').then(r => r.json()),
-      fetch('/api/musiques/top-albums').then(r => r.json()),
-      fetch('/api/musiques/top-artistes').then(r => r.json()),
+      fetch('https://varim-music.onrender.com/api/musiques/nouveautes').then(r => r.json()),
+      fetch('https://varim-music.onrender.com/api/musiques/top-ventes').then(r => r.json()),
+      fetch('https://varim-music.onrender.com/api/musiques/top-singles').then(r => r.json()),
+      fetch('https://varim-music.onrender.com/api/musiques/top-albums').then(r => r.json()),
+      fetch('https://varim-music.onrender.com/api/musiques/top-artistes').then(r => r.json()),
     ]).then(([nouv, top, singles, albums, artistes]) => {
       setNouveautes((nouv.musiques || []).slice(0, 10));
       setTopVentes((top.musiques || []).slice(0, 10));
