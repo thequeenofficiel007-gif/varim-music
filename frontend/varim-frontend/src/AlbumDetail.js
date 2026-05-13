@@ -18,14 +18,14 @@ function AlbumDetail({ allerVers, utilisateur, albumId, handleDeconnexion }) {
 
   useEffect(() => {
     const uid = utilisateur?.id ? `?utilisateur_id=${utilisateur.id}` : '';
-    fetch(`/api/musiques/${albumId}/pistes${uid}`)
+fetch(`https://varim-music.onrender.com/api/musiques/${albumId}/pistes${uid}`)
       .then(res => res.json())
       .then(data => {
         setAlbum(data.album);
         setPistes(data.pistes || []);
         if (data.aAchete !== undefined) setDejaAchete(data.aAchete);
         if (data.album?.artiste_id) {
-          return fetch(`/api/profil/${data.album.artiste_id}`);
+          return fetch(`https://varim-music.onrender.com/api/profil/${data.album.artiste_id}`);
         }
       })
       .then(res => res?.json())

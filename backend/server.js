@@ -13,7 +13,7 @@ app.use(helmet());
 
 // 🔒 Autoriser le frontend
 app.use(cors({
-  origin: ['http://localhost:3000', 'https://varim-music6.vercel.app'],
+  origin: ['http://localhost:3000', 'https://varim-music6.vercel.app', 'https://varim-test.vercel.app'],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization']
