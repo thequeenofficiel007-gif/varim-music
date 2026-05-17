@@ -30,7 +30,7 @@ const uploadMusique = async (req, res) => {
     if (type === 'single') {
       const fichierArray = req.files.filter(f => f.fieldname === 'fichier');
       if (fichierArray.length === 0) {
-        return res.status(400).json({ message: 'Fichier MP3 manquant !' });
+        return res.status(400).json({ message: 'Fichier audio manquant !' });
       }
 
       const fichierResult = await uploaderFichier(fichierArray[0].buffer, {
@@ -110,6 +110,7 @@ const getMusiques = async (req, res) => {
     res.status(500).json({ message: 'Erreur : ' + erreur.message });
   }
 };
+
 const getPistesAlbum = async (req, res) => {
   try {
     const { id } = req.params;
@@ -218,6 +219,7 @@ const getMusiquesByGenre = async (req, res) => {
     res.status(500).json({ message: 'Erreur : ' + erreur.message });
   }
 };
+
 const getTopSingles = async (req, res) => {
   try {
     const musiques = await pool.query(
@@ -253,12 +255,14 @@ const getTopAlbums = async (req, res) => {
 const getTopArtistes = async (req, res) => {
   try {
     const artistes = await pool.query(
+      // JOIN au lieu de LEFT JOIN + HAVING = seulement artistes avec au moins une musique
       `SELECT u.id, u.prenom, u.nom_artiste, u.photo_profil,
               COALESCE(SUM(m.nb_ventes), 0) as total_ventes
        FROM utilisateurs u
-       LEFT JOIN musiques m ON m.artiste_id = u.id
+       JOIN musiques m ON m.artiste_id = u.id
        WHERE u.role = 'artiste'
        GROUP BY u.id
+       HAVING COUNT(m.id) > 0
        ORDER BY total_ventes DESC
        LIMIT 10`
     );
@@ -276,7 +280,6 @@ const rechercherMusiques = async (req, res) => {
     }
     const terme = `%${q.trim().toLowerCase()}%`;
 
-    // Chercher musiques par titre
     const musiques = await pool.query(
       `SELECT m.id, m.titre, m.type, m.prix, m.pochette_url, m.fichier_url,
               m.nb_ventes, m.artiste_id, u.prenom as nom_artiste, u.photo_profil
@@ -288,7 +291,6 @@ const rechercherMusiques = async (req, res) => {
       [terme]
     );
 
-    // Chercher artistes par prénom ou nom_artiste
     const artistes = await pool.query(
       `SELECT id, prenom, nom_artiste, photo_profil, bio
        FROM utilisateurs

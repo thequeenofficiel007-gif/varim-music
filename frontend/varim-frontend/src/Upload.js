@@ -26,7 +26,7 @@ function Upload({ allerVers, utilisateur }) {
   const handleUpload = async () => {
     if (!titre) { setMessage({ texte: 'Entrez un titre.', type: 'erreur' }); return; }
     if (!genre) { setMessage({ texte: 'Choisissez un genre.', type: 'erreur' }); return; }
-    if (type === 'single' && !fichierSingle) { setMessage({ texte: 'Ajoutez le fichier MP3.', type: 'erreur' }); return; }
+    if (type === 'single' && !fichierSingle) { setMessage({ texte: 'Ajoutez le fichier audio.', type: 'erreur' }); return; }
 
     setChargement(true);
     setProgression(0);
@@ -52,22 +52,17 @@ function Upload({ allerVers, utilisateur }) {
         formData.append('nombre_pistes', pistes.length);
       }
 
-      // Upload avec XMLHttpRequest pour avoir la progression réelle
       await new Promise((resolve, reject) => {
         const xhr = new XMLHttpRequest();
 
         xhr.upload.onprogress = (e) => {
           if (e.lengthComputable) {
-            // L'envoi vers le serveur = 70% max
-            // Les 30% restants = traitement Cloudinary côté serveur
             const pct = Math.round((e.loaded / e.total) * 70);
             setProgression(pct);
           }
         };
 
         xhr.upload.onload = () => {
-          // Fichiers bien reçus par le serveur, Cloudinary traite maintenant
-          // Animation de pulsation entre 70% et 85%
           setProgression(75);
           let p = 75;
           const interval = setInterval(() => {
@@ -103,7 +98,7 @@ function Upload({ allerVers, utilisateur }) {
           reject();
         };
 
-        xhr.open('POST', '/api/musiques/upload');
+        xhr.open('POST', 'https://varim-music.onrender.com/api/musiques/upload');
         xhr.send(formData);
       });
 
@@ -112,7 +107,6 @@ function Upload({ allerVers, utilisateur }) {
     setChargement(false);
   };
 
-  // Calcul du cercle SVG
   const rayon = 54;
   const circonf = 2 * Math.PI * rayon;
   const offset = circonf - (progression / 100) * circonf;
@@ -138,7 +132,6 @@ function Upload({ allerVers, utilisateur }) {
           </div>
         )}
 
-        {/* CHARGEMENT CIRCULAIRE */}
         {chargement && (
           <div className="upl-progress-wrapper">
             <svg className={`upl-progress-svg ${progression >= 70 && progression < 100 ? 'en-attente' : ''}`} viewBox="0 0 120 120">
@@ -154,15 +147,14 @@ function Upload({ allerVers, utilisateur }) {
               />
             </svg>
             <div className="upl-progress-pct">{progression}%</div>
-        <p className="upl-progress-label">
-          {progression < 70 ? 'Envoi des fichiers...' : progression < 100 ? 'Traitement sur le serveur...' : 'Publication réussie !'}
-        </p>
+            <p className="upl-progress-label">
+              {progression < 70 ? 'Envoi des fichiers...' : progression < 100 ? 'Traitement sur le serveur...' : 'Publication réussie !'}
+            </p>
           </div>
         )}
 
         {!chargement && (
           <>
-            {/* TYPE */}
             <div className="upl-champ">
               <label>Type de publication</label>
               <div className="upl-types">
@@ -179,13 +171,11 @@ function Upload({ allerVers, utilisateur }) {
               </div>
             </div>
 
-            {/* TITRE */}
             <div className="upl-champ">
               <label>Titre</label>
               <input type="text" placeholder="Titre de votre musique" value={titre} onChange={e => setTitre(e.target.value)} className="upl-input" />
             </div>
 
-            {/* GENRE */}
             <div className="upl-champ">
               <label>Genre</label>
               <select value={genre} onChange={e => setGenre(e.target.value)} className="upl-input">
@@ -196,7 +186,6 @@ function Upload({ allerVers, utilisateur }) {
               </select>
             </div>
 
-            {/* POCHETTE */}
             <div className="upl-champ">
               <label>Pochette</label>
               <label className="upl-fichier-label">
@@ -209,19 +198,25 @@ function Upload({ allerVers, utilisateur }) {
               {pochette && <p className="upl-nom-fichier">{pochette.name}</p>}
             </div>
 
-            {/* FICHIER SINGLE */}
             {type === 'single' && (
               <div className="upl-champ">
-                <label>Fichier MP3</label>
+                <label>Fichier audio</label>
                 <label className="upl-fichier-label">
                   <Music size={22} />
                   <span>{fichierSingle ? fichierSingle.name : 'Choisir un fichier audio'}</span>
-                  <input type="file" accept="audio/*" onChange={e => setFichierSingle(e.target.files[0])} hidden />
+                  <input
+                    type="file"
+                    accept="audio/*,.mp3,.m4a,.aac,.ogg,.wav,.flac,.opus,.wma,.amr"
+                    onChange={e => setFichierSingle(e.target.files[0])}
+                    hidden
+                  />
                 </label>
+                <p style={{ fontSize: '11px', color: '#a0aec0', marginTop: '6px' }}>
+                  Formats acceptés : MP3, M4A, AAC, OGG, WAV, FLAC et autres
+                </p>
               </div>
             )}
 
-            {/* PISTES ALBUM */}
             {type === 'album' && (
               <div className="upl-champ">
                 <label>Pistes de l'album ({pistes.length}/15)</label>
@@ -240,7 +235,12 @@ function Upload({ allerVers, utilisateur }) {
                         <label className="upl-piste-fichier-label">
                           <Music size={13} />
                           <span>{piste.fichier ? piste.fichier.name : 'Audio'}</span>
-                          <input type="file" accept="audio/*" onChange={e => modifierPiste(i, 'fichier', e.target.files[0])} hidden />
+                          <input
+                            type="file"
+                            accept="audio/*,.mp3,.m4a,.aac,.ogg,.wav,.flac,.opus,.wma,.amr"
+                            onChange={e => modifierPiste(i, 'fichier', e.target.files[0])}
+                            hidden
+                          />
                         </label>
                       </div>
                       {pistes.length > 1 && (
