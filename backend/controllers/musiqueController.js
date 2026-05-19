@@ -18,8 +18,8 @@ const uploadMusique = async (req, res) => {
 
     // Uploader la pochette
     let pochetteUrl = '';
-    const pochetteArray = req.files.filter(f => f.fieldname === 'pochette');
-    if (pochetteArray.length > 0) {
+    const pochetteArray = req.files?.pochette;
+    if (pochetteArray && pochetteArray.length > 0) {
       const result = await uploaderFichier(pochetteArray[0].buffer, {
         resource_type: 'image',
         folder: 'varim-music/pochettes'
@@ -28,8 +28,8 @@ const uploadMusique = async (req, res) => {
     }
 
     if (type === 'single') {
-      const fichierArray = req.files.filter(f => f.fieldname === 'fichier');
-      if (fichierArray.length === 0) {
+      const fichierArray = req.files?.fichier;
+      if (!fichierArray || fichierArray.length === 0) {
         return res.status(400).json({ message: 'Fichier audio manquant !' });
       }
 
@@ -65,10 +65,10 @@ const uploadMusique = async (req, res) => {
       const nbPistes = parseInt(nombre_pistes);
 
       for (let i = 0; i < nbPistes; i++) {
-        const pisteFichier = req.files.filter(f => f.fieldname === `piste_fichier_${i}`);
+        const pisteFichier = req.files?.[`piste_fichier_${i}`];
         const pisteTitre = req.body[`piste_titre_${i}`];
 
-        if (pisteFichier.length > 0) {
+        if (pisteFichier && pisteFichier.length > 0) {
           const pisteResult = await uploaderFichier(pisteFichier[0].buffer, {
             resource_type: 'video',
             folder: 'varim-music/pistes'
