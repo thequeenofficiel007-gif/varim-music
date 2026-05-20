@@ -15,7 +15,7 @@ function Bibliotheque({ allerVers, utilisateur, handleDeconnexion }) {
 
   useEffect(() => {
     if (!utilisateur) { allerVers('login'); return; }
-    fetch('https://varim-music.onrender.com/api/achats/mes-achats/${utilisateur.id}`)
+    fetch(`https://varim-music.onrender.com/api/achats/mes-achats/${utilisateur.id}`)
       .then(res => res.json())
       .then(data => { setAchats(data.achats); setChargement(false); })
       .catch(() => setChargement(false));
@@ -52,7 +52,7 @@ function Bibliotheque({ allerVers, utilisateur, handleDeconnexion }) {
 
   const togglePistesAlbum = async (musiqueId) => {
     if (pistesAlbum[musiqueId]) { setPistesAlbum(prev => ({ ...prev, [musiqueId]: null })); return; }
-    const res = await fetch('https://varim-music.onrender.com/api/musiques/${musiqueId}/pistes?utilisateur_id=${utilisateur?.id}`);
+    const res = await fetch(`https://varim-music.onrender.com/api/musiques/${musiqueId}/pistes?utilisateur_id=${utilisateur?.id}`);
     const data = await res.json();
     setPistesAlbum(prev => ({ ...prev, [musiqueId]: data.pistes }));
   };
