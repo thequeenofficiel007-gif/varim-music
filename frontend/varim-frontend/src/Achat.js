@@ -69,7 +69,7 @@ function Achat({ allerVers, utilisateur, musiqueId }) {
         const interval = setInterval(async () => {
           tentatives++;
           try {
-            const check = await fetch(`/api/achats/verifier/${referenceId}`);
+            const check = await fetch('https://varim-music.onrender.com/api/achats/verifier/${referenceId}`);
             const data = await check.json();
             if (data.statut === 'confirme') {
               clearInterval(interval);

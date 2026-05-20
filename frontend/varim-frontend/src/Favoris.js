@@ -17,7 +17,7 @@ function Favoris({ allerVers, utilisateur, handleDeconnexion }) {
   }, [utilisateur]);
 
   const chargerFavoris = () => {
-    fetch(`/api/favoris/${utilisateur.id}`)
+    fetch('https://varim-music.onrender.com/api/favoris/${utilisateur.id}`)
       .then(res => res.json())
       .then(data => { setFavoris(data.favoris || []); setChargement(false); })
       .catch(() => setChargement(false));

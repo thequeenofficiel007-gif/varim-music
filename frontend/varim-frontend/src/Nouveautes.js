@@ -18,7 +18,7 @@ function Nouveautes({ allerVers, utilisateur, handleDeconnexion }) {
 
     const derniereVisite = localStorage.getItem(STORAGE_KEY + '_' + utilisateur.id);
 
-    fetch(`/api/musiques/suivis/${utilisateur.id}`)
+    fetch('https://varim-music.onrender.com/api/musiques/suivis/${utilisateur.id}`)
       .then(res => res.json())
       .then(data => {
         const liste = data.musiques || [];

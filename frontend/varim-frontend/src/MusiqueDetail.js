@@ -16,14 +16,14 @@ function MusiqueDetail({ allerVers, utilisateur, musiqueId, handleDeconnexion })
 
   useEffect(() => {
     // Charger les infos de la musique
-    fetch(`/api/musiques`)
+    fetch('https://varim-music.onrender.com/api/musiques`)
       .then(res => res.json())
       .then(data => {
         const m = (data.musiques || []).find(m => m.id === parseInt(musiqueId));
         if (m) {
           setMusique(m);
           // Charger le profil de l'artiste
-          return fetch(`/api/profil/${m.artiste_id}`);
+          return fetch('https://varim-music.onrender.com/api/profil/${m.artiste_id}`);
         }
       })
       .then(res => res?.json())
@@ -35,7 +35,7 @@ function MusiqueDetail({ allerVers, utilisateur, musiqueId, handleDeconnexion })
 
     // Vérifier si déjà acheté
     if (utilisateur) {
-      fetch(`/api/achats/mes-achats/${utilisateur.id}`)
+      fetch('https://varim-music.onrender.com/api/achats/mes-achats/${utilisateur.id}`)
         .then(res => res.json())
         .then(data => {
           const achats = data.achats || [];

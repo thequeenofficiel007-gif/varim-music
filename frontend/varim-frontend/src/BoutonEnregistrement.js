@@ -7,7 +7,7 @@ function BoutonEnregistrement({ utilisateur, musiqueId, style = 'rond' }) {
 
   useEffect(() => {
     if (!utilisateur || !musiqueId) return;
-    fetch(`/api/enregistrements/verifier?utilisateur_id=${utilisateur.id}&musique_id=${musiqueId}`)
+    fetch('https://varim-music.onrender.com/api/enregistrements/verifier?utilisateur_id=${utilisateur.id}&musique_id=${musiqueId}`)
       .then(r => r.json())
       .then(d => { if (d.estEnregistre !== undefined) setEstEnregistre(d.estEnregistre); })
       .catch(() => {});

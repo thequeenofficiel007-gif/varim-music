@@ -16,7 +16,7 @@ function ProfilArtiste({ allerVers, utilisateur, artisteId, handleDeconnexion })
   const audioRef = useRef(null);
 
   useEffect(() => {
-    fetch(`/api/profil/${artisteId}`)
+    fetch('https://varim-music.onrender.com/api/profil/${artisteId}`)
       .then(res => res.json())
       .then(data => {
         setArtiste(data.artiste);
@@ -27,7 +27,7 @@ function ProfilArtiste({ allerVers, utilisateur, artisteId, handleDeconnexion })
       .catch(() => setChargement(false));
 
     if (utilisateur) {
-      fetch(`/api/profil/${artisteId}/abonnements?abonne_id=${utilisateur.id}`)
+      fetch('https://varim-music.onrender.com/api/profil/${artisteId}/abonnements?abonne_id=${utilisateur.id}`)
         .then(res => res.json())
         .then(data => setEstAbonne(data.estAbonne));
     }

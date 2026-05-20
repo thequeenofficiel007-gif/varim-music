@@ -57,7 +57,7 @@ function Catalogue({ allerVers, utilisateur, handleDeconnexion }) {
     setRechercheActive(true);
     setRechercheEnCours(true);
     rechercheTimeout.current = setTimeout(() => {
-      fetch(`/api/musiques/recherche?q=${encodeURIComponent(recherche.trim())}`)
+      fetch('https://varim-music.onrender.com/api/musiques/recherche?q=${encodeURIComponent(recherche.trim())}`)
         .then(r => r.json())
         .then(data => {
           setResultatsRecherche({ musiques: data.musiques || [], artistes: data.artistes || [] });

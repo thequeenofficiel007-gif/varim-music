@@ -16,7 +16,7 @@ function Dashboard({ allerVers, utilisateur, handleDeconnexion }) {
 
   useEffect(() => {
     if (!utilisateur || utilisateur.role !== 'artiste') { allerVers('accueil'); return; }
-    fetch(`/api/dashboard/${utilisateur.id}`)
+    fetch('https://varim-music.onrender.com/api/dashboard/${utilisateur.id}`)
       .then(res => res.json())
       .then(data => { setDonnees(data); setChargement(false); })
       .catch(() => setChargement(false));

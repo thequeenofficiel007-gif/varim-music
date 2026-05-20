@@ -21,7 +21,7 @@ function SingleDetail({ allerVers, utilisateur, musiqueId, handleDeconnexion }) 
         const m = (data.musiques || []).find(m => m.id === parseInt(musiqueId));
         if (m) {
           setMusique(m);
-          return fetch(`/api/profil/${m.artiste_id}`);
+          return fetch('https://varim-music.onrender.com/api/profil/${m.artiste_id}`);
         }
       })
       .then(res => res?.json())
@@ -29,7 +29,7 @@ function SingleDetail({ allerVers, utilisateur, musiqueId, handleDeconnexion }) 
       .catch(() => setChargement(false));
 
     if (utilisateur) {
-      fetch(`/api/achats/mes-achats/${utilisateur.id}`)
+      fetch('https://varim-music.onrender.com/api/achats/mes-achats/${utilisateur.id}`)
         .then(res => res.json())
         .then(data => {
           setDejaAchete((data.achats || []).some(a => a.musique_id === parseInt(musiqueId)));

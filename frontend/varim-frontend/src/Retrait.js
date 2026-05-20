@@ -16,7 +16,7 @@ function Retrait({ allerVers, utilisateur, handleDeconnexion }) {
 
   const chargerDonnees = () => {
     if (utilisateur) {
-      fetch(`/api/retraits/${utilisateur.id}`)
+      fetch('https://varim-music.onrender.com/api/retraits/${utilisateur.id}`)
         .then(res => res.json())
         .then(data => { setSoldes(data.soldes); setRetraits(data.retraits); });
     }

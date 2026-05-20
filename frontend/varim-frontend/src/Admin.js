@@ -36,7 +36,7 @@ function Admin({ allerVers, utilisateur, handleDeconnexion }) {
     } else if (periode === 'perso' && debut && fin) {
       params = `?debut=${debut}&fin=${fin}`;
     }
-    fetch(`/api/admin/stats${params}`)
+    fetch('https://varim-music.onrender.com/api/admin/stats${params}`)
       .then(res => res.json())
       .then(data => { setDonnees(data); setChargement(false); })
       .catch(() => setChargement(false));

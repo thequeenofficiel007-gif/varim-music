@@ -35,7 +35,7 @@ function NavMobile({ utilisateur, allerVers, handleDeconnexion }) {
           localStorage.setItem(VISITE_KEY + utilisateur.id, new Date().toISOString());
           return;
         }
-        const res = await fetch(`/api/musiques/suivis/${utilisateur.id}`);
+        const res = await fetch('https://varim-music.onrender.com/api/musiques/suivis/${utilisateur.id}`);
         const data = await res.json();
         const aNouvellesPublications = (data.musiques || []).some(
           m => new Date(m.date_ajout) > new Date(derniereVisite)

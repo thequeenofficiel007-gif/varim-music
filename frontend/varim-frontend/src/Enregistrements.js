@@ -9,7 +9,7 @@ function Enregistrements({ allerVers, utilisateur, handleDeconnexion }) {
 
   useEffect(() => {
     if (!utilisateur) { allerVers('login'); return; }
-    fetch(`/api/enregistrements/${utilisateur.id}`)
+    fetch('https://varim-music.onrender.com/api/enregistrements/${utilisateur.id}`)
       .then(r => r.json())
       .then(d => { setEnregistrements(d.enregistrements || []); setChargement(false); })
       .catch(() => setChargement(false));
